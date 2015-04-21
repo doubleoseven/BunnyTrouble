@@ -3,25 +3,22 @@ using System.Collections;
 
 public class Element : MonoBehaviour 
 {
-	public bool numberFive, numberSix, numberSeven;
+	public bool percentage;
 
 	public Sprite[] numberTextures;
+	public Sprite [] Vegtables;
 	void Start () {
-		numberFive = Random.value < .30;
-		numberSix = Random.value < .20;
-		numberSeven = Random.value < .20;
-	
-		if (numberFive) {
+		percentage = Random.value <.20;
 
-			loadTexture (0);
-		} else if (numberSix) {
-			loadTexture (1);
-
-		} else if (numberSeven) {
-
-			loadTexture (2);
-		} else
-			loadTexture (3);
+		for (int i = 0; i<numberTextures.Length; i++) 
+		{
+			if(percentage)
+			{
+				loadTexture(i);
+			}
+			else 
+				loadTexture(Random.Range(0,i));
+		}
 
 	
 
