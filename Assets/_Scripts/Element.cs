@@ -25,26 +25,9 @@ public class Element : MonoBehaviour
 	}
 	public void loadTexture(int counter){
 
-			GetComponent<SpriteRenderer> ().sprite = numberTextures [counter];
+		GetComponent<SpriteRenderer> ().sprite = numberTextures [counter];
 		GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
 	}
-
-	public Sprite getSprite()
-	{
-		return GetComponent<SpriteRenderer> ().sprite;
-	}
-
-	public void loadTexture(Sprite image)
-	{
-		GetComponent<SpriteRenderer> ().sprite = image;
-	}
-
-
-
-	 
-
-
-
 
 }
 	

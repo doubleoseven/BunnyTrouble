@@ -5,9 +5,12 @@ using System.Collections;
 		public static GameManager instance = null;
 		private BoardManager boardScript;
 		public bool tileSelected;
+		public bool plantSelected;
 		private int[] numbersSelected; //Array of numbers selected
-		private int counter;
-
+		private int counter; //keeps track of the index of numbers selected
+		private int result; //
+		
+		
 		private int level = 1;
 
 		// Use this for initialization
@@ -20,6 +23,8 @@ using System.Collections;
 			numbersSelected = new int[] {0, 0, 0, 0};
 			counter = 0;
 			tileSelected = false;
+			plantSelected = false;
+			result = 0;
 			//ensures there is only one instance of the object
 			if (instance == null) {
 				instance = this;
@@ -30,6 +35,7 @@ using System.Collections;
 			InitGame ();
 		}
 
+		//Getters and Setters!
 		public int[] getSelectedNumbers(){
 			return numbersSelected;
 		}
@@ -45,7 +51,18 @@ using System.Collections;
 			counter = value;
 		}
 
-	
+		public void addResult(int number){
+			result = result + number;
+		}
+
+		public void setResult(int number){
+			result = 0;
+		}
+		
+		public int getResult(){
+			return result;
+		}
+			
 
 		void InitGame()
 		{
@@ -53,7 +70,6 @@ using System.Collections;
 		}
 		// Update is called once per frame
 		void Update () {
-		
 		}
 	}
 

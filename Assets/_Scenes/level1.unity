@@ -640,8 +640,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 409284763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.88000011, y: -3.54999995, z: 0}
-  m_LocalScale: {x: 1.16812491, y: 1, z: 1}
+  m_LocalPosition: {x: 6.28000021, y: -3.54999995, z: 0}
+  m_LocalScale: {x: 1.42580104, y: 1, z: 1}
   m_Children:
   - {fileID: 77740894}
   - {fileID: 1316791945}
@@ -658,11 +658,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4bdc0d09d72747df859e5bce3813f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberSelected:
-  - {fileID: 2800000, guid: cb5533ea795d042a2af0125e003e0fef, type: 3}
-  - {fileID: 2800000, guid: dd16d3c2dc9014813950ee098e4f194e, type: 3}
-  - {fileID: 2800000, guid: 54ef1260b56dc41ea9475fa927d264c8, type: 3}
-  - {fileID: 2800000, guid: 03c211fc286ea4a9d898faa04eab44e3, type: 3}
+  listOfNumbers: []
+  _skin: {fileID: 11400000, guid: eee079b0ffce448ceb221aa14af504c2, type: 2}
 --- !u!1 &419933444
 GameObject:
   m_ObjectHideFlags: 0
