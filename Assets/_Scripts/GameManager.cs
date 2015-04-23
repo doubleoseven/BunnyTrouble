@@ -5,6 +5,8 @@ using System.Collections;
 		public static GameManager instance = null;
 		private BoardManager boardScript;
 		public bool tileSelected;
+		private int[] numbersSelected; //Array of numbers selected
+		private int counter;
 
 		private int level = 1;
 
@@ -15,6 +17,8 @@ using System.Collections;
 
 		void Awake()
 		{
+			numbersSelected = new int[] {0, 0, 0, 0};
+			counter = 0;
 			tileSelected = false;
 			//ensures there is only one instance of the object
 			if (instance == null) {
@@ -25,6 +29,23 @@ using System.Collections;
 			boardScript = GetComponent<BoardManager>();
 			InitGame ();
 		}
+
+		public int[] getSelectedNumbers(){
+			return numbersSelected;
+		}
+
+		public void setSelectedNumbers(int[] array){
+			numbersSelected = array;
+		}
+		public int getCounter(){
+			return counter;
+		}
+
+		public void setCounter(int value){
+			counter = value;
+		}
+
+	
 
 		void InitGame()
 		{
