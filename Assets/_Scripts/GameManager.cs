@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-namespace Completed
-		
-{
 	public class GameManager : MonoBehaviour {
 		public static GameManager instance = null;
 		private BoardManager boardScript;
+		public bool tileSelected;
 
-		private int level = 3;
+		private int level = 1;
 
 		// Use this for initialization
 		void Start () {
@@ -18,6 +15,7 @@ namespace Completed
 
 		void Awake()
 		{
+			tileSelected = false;
 			//ensures there is only one instance of the object
 			if (instance == null) {
 				instance = this;
@@ -37,4 +35,4 @@ namespace Completed
 		
 		}
 	}
-}
+

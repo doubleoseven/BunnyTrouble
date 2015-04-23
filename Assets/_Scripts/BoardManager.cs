@@ -2,10 +2,6 @@
 using System;
 using System.Collections.Generic;       //Allows us to use Lists.
 using Random = UnityEngine.Random;      //Tells Random to use the Unity Engine random number generator.
-
-namespace Completed
-	
-{
 	
 	public class BoardManager : MonoBehaviour
 	{
@@ -28,7 +24,7 @@ namespace Completed
 		
 		public int columns = 7;                                         //Number of columns in our game board.
 		public int rows = 7;                                            //Number of rows in our game board
-		public GameObject[] numbers;                                  //Array for number
+		public GameObject[] grassCentre;                                  //Array for number
 		
 		private Transform boardHolder;  
 		//A variable to store a reference to the transform of our Board object.
@@ -67,7 +63,7 @@ namespace Completed
 				for(int y = 0; y < rows*2; y+=2)
 				{
 					//Choose a random tile from our array of floor tile prefabs and prepare to instantiate it.
-					GameObject toInstantiate = numbers[Random.Range(0, numbers.Length)];
+					GameObject toInstantiate = grassCentre[Random.Range(0, grassCentre.Length)];
 
 					//Instantiate the GameObject instance using the prefab chosen for toInstantiate at the Vector3 corresponding to current grid position in loop, cast it to GameObject.
 					GameObject instance =
@@ -109,4 +105,3 @@ namespace Completed
 
 		}
 	}
-}
