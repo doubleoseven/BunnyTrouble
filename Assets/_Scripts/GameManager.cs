@@ -6,6 +6,7 @@ using System.Collections;
 		private BoardManager boardScript;
 		public bool tileSelected;
 		public bool plantSelected;
+		private string plantType;
 		private int[] numbersSelected; //Array of numbers selected
 		private int counter; //keeps track of the index of numbers selected
 		private int result; //
@@ -61,6 +62,13 @@ using System.Collections;
 		
 		public int getResult(){
 			return result;
+		}
+
+		public string getPlantType(){
+			return plantType;
+		}
+		public void setPlantType(string type){
+			plantType = type;
 		}
 			
 

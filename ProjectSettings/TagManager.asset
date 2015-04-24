@@ -8,9 +8,8 @@ TagManager:
   - GameMusic
   - number
   - enemy
-  - plant
-  - number
   - tile
+  - scroll
   layers:
   - Default
   - TransparentFX

@@ -56,8 +56,9 @@
      <Compile Include="Assets\_Scripts\Loader.cs" />
      <Compile Include="Assets\_Scripts\bunnyHealth.cs" />
      <Compile Include="Assets\_Scripts\enemyMovement.cs" />
+     <Compile Include="Assets\_Scripts\guinumbers.cs" />
      <Compile Include="Assets\_Scripts\musicPlayer.cs" />
-     <Compile Include="Assets\_Scripts\numbersGUI.cs" />
+     <Compile Include="Assets\_Scripts\plantButton.cs" />
      <Compile Include="Assets\_Scripts\plantHealth.cs" />
      <Compile Include="Assets\_Scripts\selectNumber.cs" />
      <Compile Include="Assets\_Scripts\selectPlant.cs" />
