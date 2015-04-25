@@ -32,6 +32,7 @@ using Random = UnityEngine.Random;      //Tells Random to use the Unity Engine r
 		
 		
 		//Clears our list gridPositions and prepares it to generate a new board.
+	/*
 		void InitialiseList ()
 		{
 			//Clear our list gridPositions.
@@ -48,7 +49,7 @@ using Random = UnityEngine.Random;      //Tells Random to use the Unity Engine r
 				}
 			}
 		}
-		
+		*/
 		
 		//Sets up the outer walls and floor (background) of the game board.
 		void BoardSetup ()
@@ -63,6 +64,7 @@ using Random = UnityEngine.Random;      //Tells Random to use the Unity Engine r
 				for(int y = 0; y < rows*2; y+=2)
 				{
 					//Choose a random tile from our array of floor tile prefabs and prepare to instantiate it.
+					gridPositions.Add (new Vector3(x, y, 0f));
 					GameObject toInstantiate = grassCentre[Random.Range(0, grassCentre.Length)];
 
 					//Instantiate the GameObject instance using the prefab chosen for toInstantiate at the Vector3 corresponding to current grid position in loop, cast it to GameObject.
@@ -92,6 +94,7 @@ using Random = UnityEngine.Random;      //Tells Random to use the Unity Engine r
 			//Return the randomly selected Vector3 position.
 			return randomPosition;
 		}
+	
 
 		
 		//SetupScene initializes our level and calls the previous functions to lay out the game board
@@ -101,7 +104,7 @@ using Random = UnityEngine.Random;      //Tells Random to use the Unity Engine r
 			BoardSetup ();
 			
 			//Reset our list of gridpositions.
-			InitialiseList ();
+			//InitialiseList ();
 
 		}
 	}

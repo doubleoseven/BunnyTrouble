@@ -5,11 +5,12 @@ using System.Collections;
 		public static GameManager instance = null;
 		private BoardManager boardScript;
 		public bool tileSelected;
-		public bool plantSelected;
-		private string plantType;
+		public bool plantSelected; 
+		private string plantType; //Keeps track of the pant selected
+		private int tileSelectedValue;//Keeps track of the value of the tile selected
 		private int[] numbersSelected; //Array of numbers selected
 		private int counter; //keeps track of the index of numbers selected
-		private int result; //
+		private int result; //Keeps track of the result of the numbers selected
 		
 		
 		private int level = 1;
@@ -70,6 +71,15 @@ using System.Collections;
 		public void setPlantType(string type){
 			plantType = type;
 		}
+
+		public void setTileSelectedValue(int value){
+			tileSelectedValue = value;
+		}
+
+		public int getTileSelectedValue(){
+			return tileSelectedValue;
+		}
+
 			
 
 		void InitGame()

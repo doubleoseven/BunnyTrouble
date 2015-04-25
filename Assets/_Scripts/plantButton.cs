@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class plantButton : MonoBehaviour {
+	private string tileSelected;
 
-	public void Test(){
+	public void plant(){
+
 		Debug.Log ("Clicked");
 	}
 	// Use this for initialization

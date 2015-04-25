@@ -7,12 +7,16 @@ public class guinumbers : MonoBehaviour {
 	private int[] numbersSelected;
 	[SerializeField]
 	Text firstOperand;
+
 	[SerializeField]
 	Text secondOperand;
+
 	[SerializeField]
 	Text thirdOperand;
+
 	[SerializeField]
 	Text fourthOperand;
+
 	[SerializeField]
 	Text result;
 
