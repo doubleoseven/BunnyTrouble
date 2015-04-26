@@ -11,6 +11,8 @@ using System.Collections;
 		private int[] numbersSelected; //Array of numbers selected
 		private int counter; //keeps track of the index of numbers selected
 		private int result; //Keeps track of the result of the numbers selected
+		public bool carrotPlanted;
+		public bool turnipPlanted;
 		
 		
 		private int level = 1;
@@ -26,6 +28,8 @@ using System.Collections;
 			counter = 0;
 			tileSelected = false;
 			plantSelected = false;
+			carrotPlanted = false;
+			turnipPlanted = false;
 			result = 0;
 			//ensures there is only one instance of the object
 			if (instance == null) {

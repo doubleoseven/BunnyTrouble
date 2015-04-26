@@ -126,6 +126,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 21210542, guid: 4a098554b7408424d8a88b6ce0390821, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ad89bd92428f5458a8212b1c5a8e913e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a098554b7408424d8a88b6ce0390821, type: 2}
   m_IsPrefabParent: 0
@@ -288,8 +293,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &115363306
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +338,7 @@ RectTransform:
   - {fileID: 1604235036}
   - {fileID: 534983919}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -697,8 +704,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &345195457
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,8 +801,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &368327893
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,8 +898,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &409284763
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +956,7 @@ Transform:
   m_LocalScale: {x: 1.42580104, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!114 &409284766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,8 +1066,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &434306352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,8 +1163,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &446052062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,8 +1260,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &457637944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,8 +1357,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &534983918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,8 +1520,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &657410240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,8 +1617,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &662688171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,8 +1714,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1001 &679470231
 Prefab:
   m_ObjectHideFlags: 0
@@ -1730,6 +1757,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 21216480, guid: 1b1ad9e715ebc43ddb042188dbb9010d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e3196a71b7dbf4083ac28a166082d5d5,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b1ad9e715ebc43ddb042188dbb9010d, type: 2}
   m_IsPrefabParent: 0
@@ -1873,8 +1905,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &811796590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,7 +1965,7 @@ Transform:
   - {fileID: 1278250455}
   - {fileID: 333005574}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &816657939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,7 +2050,53 @@ Transform:
   m_LocalScale: {x: .34686178, y: .340203047, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
+--- !u!1001 &876100275
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 417486, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.50999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 417486, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.05000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 417486, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417486, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417486, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417486, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417486, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 417486, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 141206, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+      propertyPath: m_Name
+      value: turnip
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &878381901
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11453284, guid: abd1ff051083148e28ac3f66fc95fdd8,
@@ -2116,8 +2196,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1022859460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2283,7 @@ Transform:
   m_LocalScale: {x: 1, y: .749999702, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1037012550
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,8 +2443,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1169507519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,8 +2606,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1212154965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,8 +2703,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1244379081
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,8 +2800,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1260111754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2873,8 +2963,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1393498591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,8 +3060,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1424541529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,6 +3219,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 21285850, guid: 84547afeb71d74fdd91ad34ad065d3cc, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7acb7692502f2415ca7a8dd3637a132c,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84547afeb71d74fdd91ad34ad065d3cc, type: 2}
   m_IsPrefabParent: 0
@@ -3353,8 +3452,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1542467200
 GameObject:
   m_ObjectHideFlags: 0
@@ -3448,8 +3549,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1552558527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3543,8 +3646,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1555246957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3638,8 +3743,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1604235035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3706,48 +3813,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1604235035}
---- !u!1001 &1626865843
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 496782, guid: e6c487f9ede664f75b0c69efb9c94c6a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.61025381
-      objectReference: {fileID: 0}
-    - target: {fileID: 496782, guid: e6c487f9ede664f75b0c69efb9c94c6a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5.01620579
-      objectReference: {fileID: 0}
-    - target: {fileID: 496782, guid: e6c487f9ede664f75b0c69efb9c94c6a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496782, guid: e6c487f9ede664f75b0c69efb9c94c6a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496782, guid: e6c487f9ede664f75b0c69efb9c94c6a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496782, guid: e6c487f9ede664f75b0c69efb9c94c6a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496782, guid: e6c487f9ede664f75b0c69efb9c94c6a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 496782, guid: e6c487f9ede664f75b0c69efb9c94c6a, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e6c487f9ede664f75b0c69efb9c94c6a, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1644332595
 GameObject:
   m_ObjectHideFlags: 0
@@ -3841,8 +3906,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1684159229
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,8 +4003,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1783734436
 GameObject:
   m_ObjectHideFlags: 0
@@ -4209,8 +4278,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1876234920
 GameObject:
   m_ObjectHideFlags: 0
@@ -4304,8 +4375,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &1940782148
 GameObject:
   m_ObjectHideFlags: 0
@@ -4399,8 +4472,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1001 &1980773507
 Prefab:
   m_ObjectHideFlags: 0
@@ -4536,8 +4611,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables: []
+  vegtables: []
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!1 &2109674875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4610,7 +4687,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1001 &2130499281
 Prefab:
   m_ObjectHideFlags: 0
@@ -4650,6 +4727,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 21204630, guid: 281409ca027f649ca9b41fc227416e21, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cd54998bac8c145d0ab8090f72d72305,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 281409ca027f649ca9b41fc227416e21, type: 2}
   m_IsPrefabParent: 0

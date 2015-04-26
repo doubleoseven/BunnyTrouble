@@ -6,12 +6,14 @@ public class Element : MonoBehaviour
 	public bool percentage;
 
 	public Sprite[] numberTextures;
-	public Sprite [] Vegtables;
+	public Sprite [] vegtables;
 	private string type;
 	public int value;
-
+	public bool carrotPlanted;
+	public bool turnipPlanted;
+	selectTile tile;
 	void Start () {
-
+		tile = GetComponent<selectTile> ();
 		percentage = Random.value <.20;
 
 		for (int i = 0; i<numberTextures.Length; i++) 
@@ -31,12 +33,24 @@ public class Element : MonoBehaviour
 
 		GetComponent<SpriteRenderer> ().sprite = numberTextures [counter];
 		GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
-		type = numberTextures [counter].name;
+		type = numberTextures [counter].name; 
 		setValue (type);
+	}
+
+	public void loadVegtable(int index){
+		GetComponent<SpriteRenderer> ().sprite = vegtables [index];
 	}
 
 	public int getValue(){
 		return value;
+	}
+
+	public void setCarrotPlanted (bool planted){
+		carrotPlanted = planted;
+	}
+
+	public void setTurnipPlanted(bool planted){
+		turnipPlanted = planted;
 	}
 
 	public void setValue(string type){
@@ -46,7 +60,7 @@ public class Element : MonoBehaviour
 			value = 14;
 		else if (type == "thirteen")
 			value = 13;
-		else if (type == "twelve")
+		else if (type == "tweleve")
 			value = 12;
 		else if (type == "eleven")
 			value = 11;
@@ -66,8 +80,20 @@ public class Element : MonoBehaviour
 	
 
 	void Update(){
+		if (GameManager.instance.carrotPlanted == true && tile.getCurrentSelected()) {
+			loadVegtable (0);
+			tile.setCurrentSelected(false);
+			tile.setVegtablePlanted(true);
+			GameManager.instance.tileSelected = false;
+			GameManager.instance.carrotPlanted = false;
+		} else if (GameManager.instance.turnipPlanted == true && tile.getCurrentSelected()) {
+			loadVegtable(1);
+			tile.setCurrentSelected(false);
+			tile.setVegtablePlanted(true);
+			GameManager.instance.tileSelected = false;
+			GameManager.instance.turnipPlanted = false;
+		}
 	}
-
 }
 	
 

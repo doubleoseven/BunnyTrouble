@@ -9,11 +9,13 @@ public class selectTile : MonoBehaviour {
 	Sprite carrot;
 	[SerializeField]
 	Sprite turnip;
+
+
 	//private string tileSelectedName;
 
 	// Use this for initialization
 	void Start () {
-		element = GetComponent<Element> ();
+		element = GetComponent<Element> () as Element;
 		currentSelected = false;
 		vegtablePlanted = false;
 	
@@ -42,24 +44,34 @@ public class selectTile : MonoBehaviour {
 		return currentSelected;
 	}
 
+	public void setCurrentSelected(bool selected){
+		currentSelected = selected;
+	}
+
 	public bool getVegtablePlanted(){
 		return vegtablePlanted;
 	}
 
+	public void setVegtablePlanted(bool planted){
+		vegtablePlanted = planted;
+	}
+
+
 	public void Plant()
 	{
 		if (GameManager.instance.tileSelected) {
-			if(GameManager.instance.plantSelected){
-
-				if(GameManager.instance.getResult() == GameManager.instance.getTileSelectedValue()){
-					if(GameManager.instance.getPlantType() == "carrot"){
-						element.gameObject.GetComponent<SpriteRenderer>().sprite = carrot; 
-					}
-					else if(GameManager.instance.getPlantType() == "turnip"){
-						element.gameObject.GetComponent<SpriteRenderer>().sprite = turnip;
-					}
-				} else Debug.Log ("Result not correct");
-			} else Debug.Log("Plant not selected");
+				if(GameManager.instance.plantSelected){
+					if(GameManager.instance.getResult() == GameManager.instance.getTileSelectedValue()){
+						if(GameManager.instance.getPlantType() == "carrot"){
+							GameManager.instance.carrotPlanted = true;
+							//vegtablePlanted = true;
+							//GameManager.instance.tileSelected = false;
+						}
+						else if(GameManager.instance.getPlantType() == "turnip"){
+							GameManager.instance.turnipPlanted = true;
+						}
+					} else Debug.Log ("Result not correct");
+				} else Debug.Log("Plant not selected");
 		} else Debug.Log ("Tile not selected");
 	}
 	

@@ -68,10 +68,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  Vegtables:
+  vegtables:
   - {fileID: 21300000, guid: 6d865e712c63a42e7974234112ead30e, type: 3}
-  - {fileID: 21300000, guid: 21221c29516614bb0b35e7e6e4d6aa24, type: 3}
+  - {fileID: 21300000, guid: 995ac4897df9b48a1a7537b0af4aad0a, type: 3}
   value: 0
+  carrotPlanted: 0
+  turnipPlanted: 0
 --- !u!114 &11453284
 MonoBehaviour:
   m_ObjectHideFlags: 1
