@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\AspectRatio.cs" />
      <Compile Include="Assets\_Scripts\BoardManager.cs" />
      <Compile Include="Assets\_Scripts\DontDestroy.cs" />
      <Compile Include="Assets\_Scripts\Element.cs" />

@@ -1977,6 +1977,7 @@ GameObject:
   - 212: {fileID: 816657942}
   - 143: {fileID: 816657941}
   - 114: {fileID: 816657940}
+  - 95: {fileID: 816657944}
   m_Layer: 0
   m_Name: bunny
   m_TagString: enemy
@@ -2051,6 +2052,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!95 &816657944
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816657939}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ff6ebaae531e4e4e9d49ad755d96d0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &876100275
 Prefab:
   m_ObjectHideFlags: 0
@@ -4040,7 +4058,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 207, y: -186}
+  m_AnchoredPosition: {x: 164, y: -136}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1783734438
