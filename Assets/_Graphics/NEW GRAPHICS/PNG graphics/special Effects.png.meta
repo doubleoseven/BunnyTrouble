@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: ed0af6fc46b844c0b9e8fba8e8895948
-timeCreated: 1430193689
+timeCreated: 1430202885
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: eat1
+    21300002: eat2
+    21300004: transform1
+    21300006: transfom2
+    21300008: transform3
+    21300010: transform4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +36,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +54,67 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: eat1
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 2943
+        width: 395
+        height: 366
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eat2
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 2937
+        width: 315
+        height: 389
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: transform1
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 2361
+        width: 500
+        height: 437
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: transfom2
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 2269
+        width: 621
+        height: 541
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: transform3
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 2223
+        width: 570
+        height: 552
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: transform4
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1596
+        width: 541
+        height: 489
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

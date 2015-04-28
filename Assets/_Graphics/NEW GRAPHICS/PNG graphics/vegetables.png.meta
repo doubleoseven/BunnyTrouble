@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: 6c243d0e986044f258e3eb9a7d449165
-timeCreated: 1430149116
+timeCreated: 1430201653
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: vegetables_0
-    21300002: vegetables_1
-    21300004: vegetables_2
-    21300006: vegetables_3
+    21300000: tomatoes
+    21300002: pumpkin
+    21300004: carrot
+    21300006: turnip
     21300008: vegetables_4
     21300010: vegetables_5
     21300012: vegetables_6
@@ -89,7 +89,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: vegetables_0
+    - name: tomatoes
       rect:
         serializedVersion: 2
         x: 99
@@ -99,7 +99,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: vegetables_1
+    - name: pumpkin
       rect:
         serializedVersion: 2
         x: 835
@@ -107,9 +107,9 @@ TextureImporter:
         width: 1370
         height: 913
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: vegetables_2
+    - name: carrot
       rect:
         serializedVersion: 2
         x: 99
@@ -117,9 +117,9 @@ TextureImporter:
         width: 537
         height: 357
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: vegetables_3
+    - name: turnip
       rect:
         serializedVersion: 2
         x: 129
@@ -127,7 +127,7 @@ TextureImporter:
         width: 507
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

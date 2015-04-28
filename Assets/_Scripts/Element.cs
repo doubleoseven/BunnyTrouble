@@ -39,6 +39,7 @@ public class Element : MonoBehaviour
 
 	public void loadVegtable(int index){
 		GetComponent<SpriteRenderer> ().sprite = vegtables [index];
+		GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
 	}
 
 	public int getValue(){

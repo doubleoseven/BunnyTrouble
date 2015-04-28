@@ -37,7 +37,8 @@ public class bunnyHealth : MonoBehaviour
 
 		if (currentHealth <= 0) {
 
-			changetheSprite();
+			//changetheSprite();
+			Destroy(gameObject);
 		} 
 
 	}
