@@ -9,6 +9,7 @@ public class selectTile : MonoBehaviour {
 	Sprite carrot;
 	[SerializeField]
 	Sprite turnip;
+	//plant = GameObject.FindGameObjectsWithTag("plant");
 
 
 	//private string tileSelectedName;

@@ -1,9 +1,49 @@
 fileFormatVersion: 2
 guid: 6c243d0e986044f258e3eb9a7d449165
-timeCreated: 1430081321
+timeCreated: 1430149116
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: vegetables_0
+    21300002: vegetables_1
+    21300004: vegetables_2
+    21300006: vegetables_3
+    21300008: vegetables_4
+    21300010: vegetables_5
+    21300012: vegetables_6
+    21300014: vegetables_7
+    21300016: vegetables_8
+    21300018: vegetables_9
+    21300020: vegetables_10
+    21300022: vegetables_11
+    21300024: vegetables_12
+    21300026: vegetables_13
+    21300028: vegetables_14
+    21300030: vegetables_15
+    21300032: vegetables_16
+    21300034: vegetables_17
+    21300036: vegetables_18
+    21300038: vegetables_19
+    21300040: vegetables_20
+    21300042: vegetables_21
+    21300044: vegetables_22
+    21300046: vegetables_23
+    21300048: vegetables_24
+    21300050: vegetables_25
+    21300052: vegetables_26
+    21300054: vegetables_27
+    21300056: vegetables_28
+    21300058: vegetables_29
+    21300060: vegetables_30
+    21300062: vegetables_31
+    21300064: vegetables_32
+    21300066: vegetables_33
+    21300068: vegetables_34
+    21300070: vegetables_35
+    21300072: vegetables_36
+    21300074: vegetables_37
+    21300076: vegetables_38
+    21300078: vegetables_39
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -27,28 +67,68 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 4096
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: vegetables_0
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 2636
+        width: 575
+        height: 765
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vegetables_1
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 2485
+        width: 1370
+        height: 913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vegetables_2
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 2121
+        width: 537
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: vegetables_3
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1635
+        width: 507
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

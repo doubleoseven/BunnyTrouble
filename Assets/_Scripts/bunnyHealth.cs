@@ -7,7 +7,7 @@ public class bunnyHealth : MonoBehaviour
 	public Sprite evilBunny;
 	public Sprite cuteBunny;
 	[SerializeField]
-	int currentHealth= 5; 
+	int currentHealth= 3; 
 	void start()
 	{
 		spriteRenderer = GetComponent<SpriteRenderer> ();
@@ -37,20 +37,20 @@ public class bunnyHealth : MonoBehaviour
 
 		if (currentHealth <= 0) {
 
-Destroy(gameObject);
+			changetheSprite();
 		} 
 
 	}
-/*
+
 	void changetheSprite()
 	{
 		if (spriteRenderer.sprite == evilBunny) 
 		{
-			//spriteRenderer.sprite == cuteBunny;
+			gameObject.GetComponent<SpriteRenderer>().sprite = cuteBunny;
 		}
 
 	}
 
-*/
+
 }
 
