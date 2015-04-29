@@ -3,12 +3,14 @@ using System.Collections;
 
 public class BunnyEating : MonoBehaviour {
 
-	private Animator animator;
+	public Animator anim;
+	//public int count=0;
 	//private bunnyHealth bHealth;
 	//private plantHealth pHealth;
+	//public bool move= true;
 	void Start(){
 
-		animator = this.GetComponent<Animator>();
+		anim = this.GetComponent<Animator>();
 
 	}
 
@@ -19,27 +21,43 @@ public class BunnyEating : MonoBehaviour {
 	void OnCollisionStay2D(Collision2D coll)
 	{  	float last = 0;
 		Debug.Log("Hit");
-		if (coll.gameObject.tag == "plant")
-		{
-			Debug.Log("Hit the plant");
-			animator.SetTrigger("IsEating");
-			if (Time.time - last >= 1) 
-			{
-				coll.gameObject.GetComponent<plantHealth> ().doDamage (1);
+
+
+
+			if (coll.gameObject.tag == "plant") {
+
+				anim.SetTrigger ("IsEating");
+			//count=+1;
+			if (Time.time - last >= 2) {
+					coll.gameObject.GetComponent<plantHealth> ().doDamage (1);
+
+					last = Time.time;
 				GetComponent<bunnyHealth> ().doDamage (1);
-				last = Time.time;
-			} 
-			plantHealth.instance.plantEaten=true;
+				} 
+		
+				
+				//bool b= true;
+				if (GameObject.Find ("carrot 1").GetComponent<plantHealth> ().IsPlantEaten) {
 
-			if(plantHealth.instance.plantEaten==true)
-			{
-
-				Animator.setFloat (2.0);
-			}
+					anim.SetBool ("plantEaten", true);
+				  
+				}
 		}
+		/*
+		int curr = GetComponent<bunnyHealth> ().currentHealth;
+		if (curr<=0)
+
+		{
+			vanishing ();
+		}
+		*/
     }
 
+	public void vanishing(){
 
+		anim.SetInteger("count",3);
+		//move = false;
+	}
 
 
 

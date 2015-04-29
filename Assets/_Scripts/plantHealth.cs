@@ -3,8 +3,8 @@ using System.Collections;
 
 public class plantHealth : MonoBehaviour {
 	[SerializeField]
-	int currentHealth= 5;
-	public static plantHealth instance = null;
+	int currentHealth= 10;
+
 	public bool IsPlantEaten = false;
 	public void doDamage(int damageValue)
 	{
