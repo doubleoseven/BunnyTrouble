@@ -72,6 +72,9 @@ MonoBehaviour:
   vegtables:
   - {fileID: 21300004, guid: 6c243d0e986044f258e3eb9a7d449165, type: 3}
   - {fileID: 21300006, guid: 6c243d0e986044f258e3eb9a7d449165, type: 3}
+  plants:
+  - {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+  - {fileID: 141206, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
   value: 0
   carrotPlanted: 0
   turnipPlanted: 0

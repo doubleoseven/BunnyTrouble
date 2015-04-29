@@ -8,6 +8,12 @@ public class BunnyEating : MonoBehaviour {
 	//private bunnyHealth bHealth;
 	//private plantHealth pHealth;
 	public plantHealth boolPlant;
+	[SerializeField] 
+	int bunnyDamage = 1;
+	[SerializeField] 
+	int plantDamage = 1;
+	[SerializeField]
+	float attackDelay = 10.0f;
 
 	void Start(){
 
@@ -17,7 +23,7 @@ public class BunnyEating : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D coll)
 	{
-		float last = 0;
+		float nextAttack = -1.0f;
 
 		if (coll.gameObject.tag == "plant") {
 
@@ -25,16 +31,16 @@ public class BunnyEating : MonoBehaviour {
 			//anim.Play ("eating");
 			Debug.Log ("eating1");
 			//
-			if (Time.time - last >= 1) {
+			if (Time.time>= nextAttack) {
 		
-				coll.gameObject.GetComponent<plantHealth> ().doDamage (1);
+				coll.gameObject.GetComponent<plantHealth> ().doDamage (plantDamage);
 
-				last = Time.time;
-				GetComponent<bunnyHealth> ().doDamage (1);
+				nextAttack = Time.time + attackDelay;
+				GetComponent<bunnyHealth> ().doDamage (bunnyDamage);
 				GameObject g = GameObject.FindGameObjectWithTag ("plant");
 				boolPlant = g.GetComponent<plantHealth> ();
-				if (boolPlant.IsPlantEaten == true) {
-					boolPlant.IsPlantEaten = false;
+				if (coll.gameObject.GetComponent<plantHealth>().IsPlantEaten == true) {
+					coll.gameObject.GetComponent<plantHealth>().IsPlantEaten = false;
 					anim.Play ("moving");
 					Debug.Log ("moving");
 				} 
@@ -47,19 +53,20 @@ public class BunnyEating : MonoBehaviour {
 
 				}
 
-			if (GameManager.instance.count == 3){
+			if (GetComponent<bunnyHealth>().isDead){
 				anim.Play("AngelBunny");
-				//GameObject.Destroy(gameObject);
+				Invoke("DestroyObject", 1);
 			}
 		//Destroy (anim);
 		}
 
-
+	
+		}
 		
-
-
-
-	}
+		public void DestroyObject (){
+		Destroy (gameObject);
+		}
+	
 
 
 }

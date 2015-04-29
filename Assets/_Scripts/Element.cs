@@ -7,6 +7,7 @@ public class Element : MonoBehaviour
 
 	public Sprite[] numberTextures;
 	public Sprite [] vegtables;
+	public GameObject[] plants;
 	private string type;
 	public int value;
 	public bool carrotPlanted;
@@ -38,7 +39,8 @@ public class Element : MonoBehaviour
 	}
 
 	public void loadVegtable(int index){
-		GetComponent<SpriteRenderer> ().sprite = vegtables [index];
+		GameObject vegtale = Instantiate (plants [index], gameObject.transform.position, gameObject.transform.rotation) as GameObject;
+		vegtale.transform.SetParent (gameObject.transform);
 		GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
 	}
 
