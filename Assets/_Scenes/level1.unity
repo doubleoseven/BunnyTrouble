@@ -938,6 +938,52 @@ MonoBehaviour:
   vegtablePlanted: 0
   carrot: {fileID: 21300000, guid: 6d865e712c63a42e7974234112ead30e, type: 3}
   turnip: {fileID: 21300000, guid: 21221c29516614bb0b35e7e6e4d6aa24, type: 3}
+--- !u!1001 &360935989
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.13299322
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.96644878
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_Name
+      value: carrot 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &368327893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,98 +1836,6 @@ MonoBehaviour:
   vegtablePlanted: 0
   carrot: {fileID: 21300000, guid: 6d865e712c63a42e7974234112ead30e, type: 3}
   turnip: {fileID: 21300000, guid: 21221c29516614bb0b35e7e6e4d6aa24, type: 3}
---- !u!1001 &552681683
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 3.22073746
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 8.48971081
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_Name
-      value: carrot 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &619174514
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 9.57999992
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 8.35999966
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-      propertyPath: m_Name
-      value: carrot 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &622584147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2582,6 +2536,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  count: 0
+  boolPlant: {fileID: 0}
 --- !u!50 &816657947
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -3712,6 +3668,52 @@ MonoBehaviour:
   vegtablePlanted: 0
   carrot: {fileID: 21300000, guid: 6d865e712c63a42e7974234112ead30e, type: 3}
   turnip: {fileID: 21300000, guid: 21221c29516614bb0b35e7e6e4d6aa24, type: 3}
+--- !u!1001 &1339829460
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 9.77818871
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.88580322
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 492628, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+      propertyPath: m_Name
+      value: carrot 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1393498591
 GameObject:
   m_ObjectHideFlags: 0

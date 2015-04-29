@@ -6,10 +6,10 @@ public class enemyMovement : MonoBehaviour {
 	public float speed ;
 
 
-	//bool a = GameObject.Find ("bunny").GetComponent<bunnyEating> ().move;
+	//bool a = GameObject.Find ("bunny").GetComponent<bunnyHealth> ().move;
 
 	void Update () {
-
+		//if(a==true)
 		transform.Translate(-Vector2.right*speed*(Time.deltaTime));
 
 	}

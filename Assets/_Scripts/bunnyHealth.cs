@@ -6,8 +6,8 @@ public class bunnyHealth : MonoBehaviour
 	private SpriteRenderer spriteRenderer; 
 
 	[SerializeField]
-	int currentHealth= 45; 
-    public bool move= true;
+	int currentHealth= 30; 
+   // public bool move= true;
 
 
 	public void doDamage(int damageValue)
@@ -17,12 +17,14 @@ public class bunnyHealth : MonoBehaviour
 
 
 
-		 //if health is 0 , bunny's speel breaks 
+
+		 //if health is 0 , bunny's spell breaks 
 
 		if (currentHealth <=0) {
-			move = false;
+
 			
-			GetComponent<BunnyEating> ().vanishing();
+//			move = false;	
+//			GetComponent<BunnyEating> ().vanishing();
 		
 			//Destroy(gameObject);
 		

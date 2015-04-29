@@ -13,6 +13,7 @@ using System.Collections;
 		private int result; //Keeps track of the result of the numbers selected
 		public bool carrotPlanted;
 		public bool turnipPlanted;
+	    public int count = 0;
 		
 		
 		private int level = 1;
