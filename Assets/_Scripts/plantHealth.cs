@@ -7,7 +7,7 @@ public class plantHealth : MonoBehaviour {
 
 	///public BunnyEating plantCount;
 
-	public bool IsPlantEaten = false;
+	public bool IsPlantEaten= false ;
 
 	public void doDamage(int damageValue)
 	{  
@@ -19,8 +19,9 @@ public class plantHealth : MonoBehaviour {
 		// if health is 0 , plant eaten 
 		
 		if (currentHealth <= 0) {	
-			GameManager.instance.count+=1;
 			IsPlantEaten=true;
+			GameManager.instance.count+=1;
+		
 			Destroy(gameObject);
 
 		

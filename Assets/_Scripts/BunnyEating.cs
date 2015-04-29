@@ -19,13 +19,11 @@ public class BunnyEating : MonoBehaviour {
 	{
 		float last = 0;
 
-
-
-
 		if (coll.gameObject.tag == "plant") {
 
 			Debug.Log ("Hit");		
-			anim.Play("eating");;
+			//anim.Play ("eating");
+			Debug.Log ("eating1");
 			//
 			if (Time.time - last >= 1) {
 		
@@ -35,28 +33,33 @@ public class BunnyEating : MonoBehaviour {
 				GetComponent<bunnyHealth> ().doDamage (1);
 				GameObject g = GameObject.FindGameObjectWithTag ("plant");
 				boolPlant = g.GetComponent<plantHealth> ();
-				if (boolPlant.IsPlantEaten==true){
-
+				if (boolPlant.IsPlantEaten == true) {
+					boolPlant.IsPlantEaten = false;
 					anim.Play ("moving");
+					Debug.Log ("moving");
+				} 
+				else {
+					anim.Play ("eating");
+					boolPlant.IsPlantEaten = true;
+					Debug.Log ("eating2");
 
-					boolPlant.IsPlantEaten=false;}
 				}
-				else{
-				anim.Play ("eating");
 
-					}
+				}
 
-			if (GameManager.instance.count == 3)
-				//anim.Stop("AngelBunny");
-			Destroy(anim);
+			if (GameManager.instance.count == 3){
+				anim.Play("AngelBunny");
+				//GameObject.Destroy(gameObject);
 			}
+		//Destroy (anim);
+		}
 
 
 		
+
+
+
 	}
-
-
-
 
 
 }
