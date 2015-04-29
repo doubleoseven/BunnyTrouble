@@ -1,15 +1,15 @@
 fileFormatVersion: 2
 guid: ed0af6fc46b844c0b9e8fba8e8895948
-timeCreated: 1430202885
+timeCreated: 1430339068
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: eat1
     21300002: eat2
-    21300004: transform1
-    21300006: transfom2
-    21300008: transform3
-    21300010: transform4
+    21300004: 1
+    21300006: 2
+    21300008: 3
+    21300010: 4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -75,7 +75,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: transform1
+    - name: 1
       rect:
         serializedVersion: 2
         x: 199
@@ -85,7 +85,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: transfom2
+    - name: 2
       rect:
         serializedVersion: 2
         x: 924
@@ -95,7 +95,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: transform3
+    - name: 3
       rect:
         serializedVersion: 2
         x: 1746
@@ -105,7 +105,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: transform4
+    - name: 4
       rect:
         serializedVersion: 2
         x: 187
