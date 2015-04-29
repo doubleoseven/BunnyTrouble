@@ -25,47 +25,37 @@ public class BunnyEating : MonoBehaviour {
 	{
 		float nextAttack = -1.0f;
 
-		if (coll.gameObject.tag == "plant") {
+		if (coll.gameObject.tag == "plant" && Time.time >= nextAttack) {
 
 			Debug.Log ("Hit");		
 			//anim.Play ("eating");
 			Debug.Log ("eating1");
 			//
-			if (Time.time>= nextAttack) {
-		
-				coll.gameObject.GetComponent<plantHealth> ().doDamage (plantDamage);
-
-				nextAttack = Time.time + attackDelay;
-				GetComponent<bunnyHealth> ().doDamage (bunnyDamage);
-				GameObject g = GameObject.FindGameObjectWithTag ("plant");
-				boolPlant = g.GetComponent<plantHealth> ();
-				if (coll.gameObject.GetComponent<plantHealth>().IsPlantEaten == true) {
-					coll.gameObject.GetComponent<plantHealth>().IsPlantEaten = false;
-					anim.Play ("moving");
-					Debug.Log ("moving");
-				} 
-				else {
-					anim.Play ("eating");
-					boolPlant.IsPlantEaten = true;
-					Debug.Log ("eating2");
-
-				}
-
-				}
-
-			if (GetComponent<bunnyHealth>().isDead){
-				anim.Play("AngelBunny");
-				Invoke("DestroyObject", 1);
+			coll.gameObject.GetComponent<plantHealth> ().doDamage (plantDamage);
+			GetComponent<bunnyHealth> ().doDamage (bunnyDamage);
+			
+			
+			if (coll.gameObject.GetComponent<plantHealth> ().IsPlantEaten == true) {
+				coll.gameObject.GetComponent<plantHealth> ().IsPlantEaten = false;
+				anim.Play ("moving");
+				Debug.Log ("moving");
+			} else {
+				anim.Play ("eating");
+				Debug.Log ("eating2");
+				//Destroy (anim);
 			}
-		//Destroy (anim);
-		}
 
-	
+			if (GetComponent<bunnyHealth> ().isDead) {
+				anim.Play ("AngelBunny");
+				Invoke ("DestroyObject(coll)", 1);
+			}
 		}
+	}
+
 		
-		public void DestroyObject (){
+	public void DestroyObject (){
 		Destroy (gameObject);
-		}
+	}
 	
 
 
