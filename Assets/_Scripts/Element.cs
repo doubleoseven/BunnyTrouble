@@ -6,12 +6,14 @@ public class Element : MonoBehaviour
 	public bool percentage;
 
 	public Sprite[] numberTextures;
-	public Sprite [] vegtables;
 	public GameObject[] plants;
+
 	private string type;
 	public int value;
+
 	public bool carrotPlanted;
 	public bool turnipPlanted;
+
 	selectTile tile;
 	void Start () {
 		tile = GetComponent<selectTile> ();
@@ -39,9 +41,9 @@ public class Element : MonoBehaviour
 	}
 
 	public void loadVegtable(int index){
+		GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0f);
 		GameObject vegtale = Instantiate (plants [index], gameObject.transform.position, gameObject.transform.rotation) as GameObject;
 		vegtale.transform.SetParent (gameObject.transform);
-		GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
 	}
 
 	public int getValue(){
@@ -80,6 +82,11 @@ public class Element : MonoBehaviour
 		else if (type == "five")
 			value = 5;
 	}
+
+	public void setCurrentSelected(bool selected)
+	{
+		tile.setCurrentSelected (selected);
+	}
 	
 
 	void Update(){
@@ -95,6 +102,10 @@ public class Element : MonoBehaviour
 			tile.setVegtablePlanted(true);
 			GameManager.instance.tileSelected = false;
 			GameManager.instance.turnipPlanted = false;
+		}
+
+		if (tile.getVegtablePlanted () == false) {
+			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
 		}
 	}
 }

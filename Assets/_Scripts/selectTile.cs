@@ -3,12 +3,18 @@ using System.Collections;
 
 public class selectTile : MonoBehaviour {
 	public bool currentSelected;
+
 	public bool vegtablePlanted;
+
 	Element element;
 	[SerializeField]
 	Sprite carrot;
 	[SerializeField]
 	Sprite turnip;
+
+	public AudioClip wrong;
+	public AudioClip plant;
+
 	//plant = GameObject.FindGameObjectsWithTag("plant");
 
 
@@ -58,23 +64,6 @@ public class selectTile : MonoBehaviour {
 	}
 
 
-	public void Plant()
-	{
-		if (GameManager.instance.tileSelected) {
-				if(GameManager.instance.plantSelected){
-					if(GameManager.instance.getResult() == GameManager.instance.getTileSelectedValue()){
-						if(GameManager.instance.getPlantType() == "carrot"){
-							GameManager.instance.carrotPlanted = true;
-							//vegtablePlanted = true;
-							//GameManager.instance.tileSelected = false;
-						}
-						else if(GameManager.instance.getPlantType() == "turnip"){
-							GameManager.instance.turnipPlanted = true;
-						}
-					} else Debug.Log ("Result not correct");
-				} else Debug.Log("Plant not selected");
-		} else Debug.Log ("Tile not selected");
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -82,6 +71,10 @@ public class selectTile : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, .5f);
 		} else if (GameManager.instance.tileSelected == false && currentSelected == false && vegtablePlanted == false) {
 			GetComponent<SpriteRenderer>().color = new Color (1f, 1f, 1f, 1f);
+		}
+
+		if (GameManager.instance.tileSelected == false) {
+			currentSelected = false;
 		}
 	
 	}

@@ -33,7 +33,8 @@ public class BunnyEating : MonoBehaviour {
 			//
 			coll.gameObject.GetComponent<plantHealth> ().doDamage (plantDamage);
 			GetComponent<bunnyHealth> ().doDamage (bunnyDamage);
-			
+
+			nextAttack = Time.time + attackDelay;
 			
 			if (coll.gameObject.GetComponent<plantHealth> ().IsPlantEaten == true) {
 				coll.gameObject.GetComponent<plantHealth> ().IsPlantEaten = false;
@@ -47,7 +48,7 @@ public class BunnyEating : MonoBehaviour {
 
 			if (GetComponent<bunnyHealth> ().isDead) {
 				anim.Play ("AngelBunny");
-				Invoke ("DestroyObject(coll)", 1);
+				Invoke ("DestroyObject", 1);
 			}
 		}
 	}

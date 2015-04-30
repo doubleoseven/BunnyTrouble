@@ -37,7 +37,7 @@ using System.Collections;
 				instance = this;
 			} else if (instance != this)
 				Destroy (gameObject);
-			DontDestroyOnLoad (gameObject);//Prevents the object from being destroyed 
+			//DontDestroyOnLoad (gameObject);//Prevents the object from being destroyed 
 			boardScript = GetComponent<BoardManager>();
 			InitGame ();
 		}

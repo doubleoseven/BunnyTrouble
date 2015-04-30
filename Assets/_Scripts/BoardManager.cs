@@ -32,14 +32,14 @@ using Random = UnityEngine.Random;      //Tells Random to use the Unity Engine r
 		
 		
 		//Clears our list gridPositions and prepares it to generate a new board.
-	/*
+
 		void InitialiseList ()
 		{
 			//Clear our list gridPositions.
 			gridPositions.Clear ();
 			
 			//Loop through x axis (columns).
-			for(int x = 1 ; x < columns-1; x++)
+			for(int x = columns ; x < columns+1; x++)
 			{
 				//Within each column, loop through y axis (rows).
 				for(int y = 1; y < rows-1; y++)
@@ -49,7 +49,7 @@ using Random = UnityEngine.Random;      //Tells Random to use the Unity Engine r
 				}
 			}
 		}
-		*/
+		
 		
 		//Sets up the outer walls and floor (background) of the game board.
 		void BoardSetup ()

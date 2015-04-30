@@ -1,15 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class plantButton : MonoBehaviour {
-	Element elem;
+public class plant : MonoBehaviour {
 
+	selectTile tile;
+
+
+	// Use this for initialization
 	void Start () {
-		elem = this.GetComponent<Element> () as Element;
+		tile = GetComponent<selectTile> ();
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
 	}
 
-	public void plant(){
-
+	public void Plant()
+	{
 		if (GameManager.instance.tileSelected) {
 			if(GameManager.instance.plantSelected){
 				if(GameManager.instance.getResult() == GameManager.instance.getTileSelectedValue()){
@@ -26,15 +35,10 @@ public class plantButton : MonoBehaviour {
 					Debug.Log ("Result not correct");
 					//musicPlayer._instance.PlaySingle(wrong);
 					GameManager.instance.tileSelected = false;
+
 				}
 			} else Debug.Log("Plant not selected");
 		} else Debug.Log ("Tile not selected");
 	}
-	// Use this for initialization
 
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

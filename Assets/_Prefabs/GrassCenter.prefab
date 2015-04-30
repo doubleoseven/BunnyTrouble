@@ -69,12 +69,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
   - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
-  vegtables:
-  - {fileID: 21300004, guid: 6c243d0e986044f258e3eb9a7d449165, type: 3}
-  - {fileID: 21300006, guid: 6c243d0e986044f258e3eb9a7d449165, type: 3}
   plants:
   - {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-  - {fileID: 141206, guid: 9a33ca96bb0674befb82b98d85c0a7a1, type: 2}
+  - {fileID: 185326, guid: 2298fff7f31e54d0ca5731555a138565, type: 2}
   value: 0
   carrotPlanted: 0
   turnipPlanted: 0
@@ -93,6 +90,8 @@ MonoBehaviour:
   vegtablePlanted: 0
   carrot: {fileID: 21300000, guid: 6d865e712c63a42e7974234112ead30e, type: 3}
   turnip: {fileID: 21300000, guid: 21221c29516614bb0b35e7e6e4d6aa24, type: 3}
+  wrong: {fileID: 8300000, guid: daeaecaa838904be5b36563a8c386b62, type: 3}
+  plant: {fileID: 8300000, guid: 70445814e5cde4d2386d707bdbdee5da, type: 3}
 --- !u!114 &11479428
 MonoBehaviour:
   m_ObjectHideFlags: 1
