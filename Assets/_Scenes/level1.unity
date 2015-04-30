@@ -5105,8 +5105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d85f8a5ee3a427d9ef6bae881aa87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrong: {fileID: 8300000, guid: daeaecaa838904be5b36563a8c386b62, type: 3}
-  correct: {fileID: 8300000, guid: 70445814e5cde4d2386d707bdbdee5da, type: 3}
 --- !u!82 &1783734442
 AudioSource:
   m_ObjectHideFlags: 0

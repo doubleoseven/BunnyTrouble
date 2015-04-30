@@ -6,7 +6,11 @@ public class LoadOnClick2 : MonoBehaviour {
 	public void LoadScene(int level)
 	{   
 		Application.LoadLevel(level);
-	
+	}
+
+	public void quit()
+	{
+		Application.Quit();
 	}
  
 }

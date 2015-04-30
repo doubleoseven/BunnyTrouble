@@ -17,15 +17,18 @@ public class plantButton : MonoBehaviour {
 			if(GameManager.instance.plantSelected){
 				if(GameManager.instance.correct){
 					if(GameManager.instance.getPlantType() == "carrot"){
-						musicPlayer._instance.PlaySingle(correct);
+						if(musicPlayer._instance!=null)
+							musicPlayer._instance.PlaySingle(correct);
 						GameManager.instance.carrotPlanted = true;
 					}
 					else if(GameManager.instance.getPlantType() == "turnip"){
-						musicPlayer._instance.PlaySingle(correct);
+						if(musicPlayer._instance!=null)
+							musicPlayer._instance.PlaySingle(correct);
 						GameManager.instance.turnipPlanted = true;
 					}
 				} else {
-					musicPlayer._instance.PlaySingle(wrong);
+					if(musicPlayer._instance!=null)
+						musicPlayer._instance.PlaySingle(wrong);
 					Debug.Log ("Result not correct");
 					GameManager.instance.tileSelected = false;
 				}
