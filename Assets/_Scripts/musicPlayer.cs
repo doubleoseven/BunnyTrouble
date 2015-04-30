@@ -23,8 +23,8 @@ public class musicPlayer : MonoBehaviour
 	public void PlaySingle(AudioClip clip)
 	{
 		soundEffect.clip = clip;
-		soundEffect.pitch = 5;
-		soundEffect.Play ();
+		soundEffect.PlayOneShot (clip);
+		Debug.Log ("Played!");
 	}
 	
 }

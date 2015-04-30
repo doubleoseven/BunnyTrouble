@@ -60,7 +60,6 @@
      <Compile Include="Assets\_Scripts\enemyMovement.cs" />
      <Compile Include="Assets\_Scripts\guinumbers.cs" />
      <Compile Include="Assets\_Scripts\musicPlayer.cs" />
-     <Compile Include="Assets\_Scripts\plant.cs" />
      <Compile Include="Assets\_Scripts\plantButton.cs" />
      <Compile Include="Assets\_Scripts\plantHealth.cs" />
      <Compile Include="Assets\_Scripts\selectNumber.cs" />

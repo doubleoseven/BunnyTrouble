@@ -85,6 +85,10 @@ using System.Collections;
 			return tileSelectedValue;
 		}
 
+		public bool correct{
+		get{ return result == tileSelectedValue;}
+	}
+
 			
 
 		void InitGame()

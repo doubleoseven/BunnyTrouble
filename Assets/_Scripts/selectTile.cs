@@ -11,10 +11,6 @@ public class selectTile : MonoBehaviour {
 	Sprite carrot;
 	[SerializeField]
 	Sprite turnip;
-
-	public AudioClip wrong;
-	public AudioClip plant;
-
 	//plant = GameObject.FindGameObjectsWithTag("plant");
 
 

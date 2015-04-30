@@ -4,6 +4,9 @@ using System.Collections;
 public class plantButton : MonoBehaviour {
 	Element elem;
 
+	public AudioClip wrong;
+	public AudioClip correct;
+
 	void Start () {
 		elem = this.GetComponent<Element> () as Element;
 	}
@@ -12,27 +15,27 @@ public class plantButton : MonoBehaviour {
 
 		if (GameManager.instance.tileSelected) {
 			if(GameManager.instance.plantSelected){
-				if(GameManager.instance.getResult() == GameManager.instance.getTileSelectedValue()){
+				if(GameManager.instance.correct){
 					if(GameManager.instance.getPlantType() == "carrot"){
+						musicPlayer._instance.PlaySingle(correct);
 						GameManager.instance.carrotPlanted = true;
-						//vegtablePlanted = true;
-						//GameManager.instance.tileSelected = false;
 					}
 					else if(GameManager.instance.getPlantType() == "turnip"){
+						musicPlayer._instance.PlaySingle(correct);
 						GameManager.instance.turnipPlanted = true;
-						//musicPlayer._instance.PlaySingle(plant);
 					}
 				} else {
+					musicPlayer._instance.PlaySingle(wrong);
 					Debug.Log ("Result not correct");
-					//musicPlayer._instance.PlaySingle(wrong);
 					GameManager.instance.tileSelected = false;
 				}
 			} else Debug.Log("Plant not selected");
 		} else Debug.Log ("Tile not selected");
+
+
 	}
 	// Use this for initialization
 
-	
 	// Update is called once per frame
 	void Update () {
 	

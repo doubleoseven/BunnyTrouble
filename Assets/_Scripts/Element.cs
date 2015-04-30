@@ -40,7 +40,7 @@ public class Element : MonoBehaviour
 		setValue (type);
 	}
 
-	public void loadVegtable(int index){
+	public void plantVegtable(int index){
 		GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0f);
 		GameObject vegtale = Instantiate (plants [index], gameObject.transform.position, gameObject.transform.rotation) as GameObject;
 		vegtale.transform.SetParent (gameObject.transform);
@@ -91,13 +91,13 @@ public class Element : MonoBehaviour
 
 	void Update(){
 		if (GameManager.instance.carrotPlanted == true && tile.getCurrentSelected()) {
-			loadVegtable (0);
+			plantVegtable (0);
 			tile.setCurrentSelected(false);
 			tile.setVegtablePlanted(true);
 			GameManager.instance.tileSelected = false;
 			GameManager.instance.carrotPlanted = false;
 		} else if (GameManager.instance.turnipPlanted == true && tile.getCurrentSelected()) {
-			loadVegtable(1);
+			plantVegtable(1);
 			tile.setCurrentSelected(false);
 			tile.setVegtablePlanted(true);
 			GameManager.instance.tileSelected = false;
