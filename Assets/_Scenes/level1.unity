@@ -5413,7 +5413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RemoteIP: 127.0.0.1
   SendToPort: 9000
-  ListenerPort: 5001
+  ListenerPort: 5000
   controller: {fileID: 0}
   gameReceiver: Cube
 --- !u!4 &1870346227
