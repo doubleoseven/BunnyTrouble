@@ -14,6 +14,9 @@ using System.Collections;
 		public bool carrotPlanted;
 		public bool turnipPlanted;
 	    public int count = 0;
+
+		public bool device;
+		
 		
 		
 		private int level = 1;
