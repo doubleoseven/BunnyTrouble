@@ -51,6 +51,10 @@ public class BunnyEating : MonoBehaviour {
 		}
 	}
 
+	void OnCollisionExit(){
+		anim.Play ("moving");
+	}
+		
 		
 	public void DestroyObject (){
 		Destroy (gameObject);
