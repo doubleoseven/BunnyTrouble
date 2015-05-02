@@ -13,39 +13,43 @@ using System.Collections;
 	// Use this for initialization
 	private void OnMouseUpAsButton()
 	{
-		if (gameObject.name == "numberOne") {
-			if (arraysOfNumbersSeleted.Length <5 && GameManager.instance.tileSelected) {
+		if (gameObject.name == "numberOne" && GameManager.instance.tileSelected) {
+			if (arraysOfNumbersSeleted.Length <5 && GameManager.instance.getCounter()<4) {
 				Debug.Log (gameObject.name);
 				arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 1;
 				GameManager.instance.addResult(1);
-				GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
+				if(GameManager.instance.getCounter()<4)
+					GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
 			}
 		} 
 
 		else if (gameObject.name == "numberTwo" && GameManager.instance.tileSelected) {
-			if (arraysOfNumbersSeleted.Length< 5) {
+			if (arraysOfNumbersSeleted.Length< 5 && GameManager.instance.getCounter()<4) {
 				Debug.Log (gameObject.name);
 				arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 2;
 				GameManager.instance.addResult(2);
-				GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
+				if(GameManager.instance.getCounter()<4)
+					GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
 			}
 		} 
 
 		else if (gameObject.name == "numberThree" && GameManager.instance.tileSelected) {
-			if(arraysOfNumbersSeleted.Length<5){
+			if(arraysOfNumbersSeleted.Length<5 && GameManager.instance.getCounter()<4){
 				Debug.Log (gameObject.name);
 				arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 3;
 				GameManager.instance.addResult(3);
-				GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
+				if(GameManager.instance.getCounter()<4)
+					GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
 				}
 		} 
 
 		else if (gameObject.name == "numberFour" && GameManager.instance.tileSelected) {
-			if(arraysOfNumbersSeleted.Length<5){
+			if(arraysOfNumbersSeleted.Length<5 && GameManager.instance.getCounter()<4){
 				Debug.Log (gameObject.name);
 				arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 4;
 				GameManager.instance.addResult(4);
-				GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
+				if(GameManager.instance.getCounter()<4)
+					GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
 				}
 		} 
 

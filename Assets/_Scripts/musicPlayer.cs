@@ -3,8 +3,6 @@ using System.Collections;
 
 public class musicPlayer : MonoBehaviour
 {
-	public AudioSource soundEffect;
-	public AudioSource bgMusic;
 	public static musicPlayer _instance = null;
 	
 	void Awake()
@@ -19,13 +17,4 @@ public class musicPlayer : MonoBehaviour
 		
 		DontDestroyOnLoad(this.gameObject) ;
 	}
-
-	public void PlaySingle(AudioClip clip)
-	{
-		soundEffect.clip = clip;
-		soundEffect.pitch = 10;
-		soundEffect.Play ();
-		Debug.Log ("Played!");
-	}
-	
 }
