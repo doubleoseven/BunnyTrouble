@@ -51,11 +51,13 @@
      <Compile Include="Assets\_Scripts\BunnyEating.cs" />
      <Compile Include="Assets\_Scripts\DontDestroy.cs" />
      <Compile Include="Assets\_Scripts\Element.cs" />
+     <Compile Include="Assets\_Scripts\EnemySpawnController.cs" />
      <Compile Include="Assets\_Scripts\GameManager.cs" />
      <Compile Include="Assets\_Scripts\Grid.cs" />
      <Compile Include="Assets\_Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\_Scripts\LoadOnClick2.cs" />
      <Compile Include="Assets\_Scripts\Loader.cs" />
+     <Compile Include="Assets\_Scripts\ScoreManager.cs" />
      <Compile Include="Assets\_Scripts\bunnyHealth.cs" />
      <Compile Include="Assets\_Scripts\enemyMovement.cs" />
      <Compile Include="Assets\_Scripts\guinumbers.cs" />

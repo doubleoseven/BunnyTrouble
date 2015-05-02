@@ -5,8 +5,6 @@ public class BunnyEating : MonoBehaviour {
 
 	public Animator anim;
     public int count=0;
-	//private bunnyHealth bHealth;
-	//private plantHealth pHealth;
 	public plantHealth boolPlant;
 	[SerializeField] 
 	int bunnyDamage = 1;

@@ -5,6 +5,7 @@ public class plantHealth : MonoBehaviour {
 	[SerializeField]
 	int currentHealth= 10;
 	selectTile tile;
+	public int scoreValue= 5; 
 
 	///public BunnyEating plantCount;
 
@@ -23,6 +24,7 @@ public class plantHealth : MonoBehaviour {
 		// if health is 0 , plant eaten 
 		
 		if (currentHealth <= 0) {	
+			ScoreManager.score += scoreValue;
 			IsPlantEaten = true;
 			tile.setVegtablePlanted(false);
 			//GameManager.instance.count+=1;
