@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/New Scenes/rules.unity
   - enabled: 1
     path: Assets/_Scenes/New Scenes/credits.unity
+  - enabled: 1
+    path: Assets/_Scenes/New Scenes/winScene.unity
