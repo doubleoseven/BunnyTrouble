@@ -51,6 +51,7 @@
      <Compile Include="Assets\_Scripts\BunnyEating.cs" />
      <Compile Include="Assets\_Scripts\DontDestroy.cs" />
      <Compile Include="Assets\_Scripts\Element.cs" />
+     <Compile Include="Assets\_Scripts\EnemyManager.cs" />
      <Compile Include="Assets\_Scripts\EnemySpawnController.cs" />
      <Compile Include="Assets\_Scripts\GameManager.cs" />
      <Compile Include="Assets\_Scripts\Grid.cs" />

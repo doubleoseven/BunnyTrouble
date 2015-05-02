@@ -19,12 +19,7 @@ public class bunnyHealth : MonoBehaviour
 		if (currentHealth < 0)
 			currentHealth = 0;
 
-	 //if health is 0 , bunny's spell breaks 
-			
-//			move = false;	
-//			GetComponent<BunnyEating> ().vanishing();
-		
-			//Destroy(gameObject)
+
 
 	}
 
