@@ -10,11 +10,9 @@ public class EnemyManager : MonoBehaviour
 
     void Start ()
     {
-<<<<<<< HEAD
+
         InvokeRepeating ("Spawn", spawnTime, Random.Range (15,30));
-=======
-        InvokeRepeating ("Spawn", spawnTime, Random.Range(15, 30));
->>>>>>> origin/master
+
     }
 
 
