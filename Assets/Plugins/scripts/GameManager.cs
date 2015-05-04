@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 	public class GameManager : MonoBehaviour {
@@ -11,10 +11,21 @@ using System.Collections;
 		private int[] numbersSelected; //Array of numbers selected
 		private int counter; //keeps track of the index of numbers selected
 		private int result; //Keeps track of the result of the numbers selected
+<<<<<<< HEAD:Assets/_Scripts/GameManager.cs
 		public string vegtablePlanted;
 		public int bunniesSaved;
 		public int bunniesCrossedOver;
 			
+=======
+		public bool carrotPlanted;
+		public bool turnipPlanted;
+	    public int count = 0;
+		public float previousBeta;
+
+		public bool device;
+		
+		
+>>>>>>> neurofeedback:Assets/Plugins/scripts/GameManager.cs
 		
 		private int level = 1;
 

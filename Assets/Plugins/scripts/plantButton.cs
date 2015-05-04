@@ -2,8 +2,16 @@
 using System.Collections;
 
 public class plantButton : MonoBehaviour {
-	Element elem;
 
+<<<<<<< HEAD:Assets/_Scripts/plantButton.cs
+=======
+	public AudioClip wrong;
+	public AudioClip correct;
+
+	void Start () {
+	}
+
+>>>>>>> neurofeedback:Assets/Plugins/scripts/plantButton.cs
 	public void plant(){
 
 		if (GameManager.instance.tileSelected) {
