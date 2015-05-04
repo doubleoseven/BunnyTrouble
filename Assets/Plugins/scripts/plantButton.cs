@@ -2,13 +2,11 @@
 using System.Collections;
 
 public class plantButton : MonoBehaviour {
-	Element elem;
 
 	public AudioClip wrong;
 	public AudioClip correct;
 
 	void Start () {
-		elem = this.GetComponent<Element> () as Element;
 	}
 
 	public void plant(){

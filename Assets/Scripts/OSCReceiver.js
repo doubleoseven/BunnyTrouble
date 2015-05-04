@@ -6,6 +6,8 @@ public var ListenerPort : int = 8050; //the port you will be listening on
 public var controller : Transform;
 public var gameReceiver = "Cube"; //the tag of the object on stage that you want to manipulate
 private var handler : Osc;
+private var concentration: float;
+private var forehead: int;
 //private var beta_values: float;
 
 //VARIABLES YOU WANT TO BE ANIMATED
@@ -38,17 +40,20 @@ public function AllMessageHandler(oscMessage: OscMessage){
 
 	var msgString = Osc.OscMessageToString(oscMessage); //the message and value combined
 	var msgAddress = oscMessage.Address; //the message parameters
-	var msgValue = oscMessage.Values[0]; //the message value
-	Debug.Log(msgString); //log the message and values coming from OSC
-	
+	concentration = oscMessage.Values[0];
+	//concentration = oscMessage.Values[0]; //the message value
+	Debug.Log("Concentration: " + concentration);
+	Debug.Log(msgString);
 
 	if(msgAddress == "/muse/elements/touching_forehead")
 	{
-		if(msgValue == 1)
+		if(concentration == 1) {
 			GameManager.instance.device = true;
+			Debug.Log("Device Connected");
+		}
 		else {
 			Debug.Log("Please adjust the headset so that all channels are receiving data");
-			GameManager.instance.device = true;
+			GameManager.instance.device = false;
 			}
 	}
 	
@@ -56,15 +61,15 @@ public function AllMessageHandler(oscMessage: OscMessage){
 	
 	//FUNCTIONS YOU WANT CALLED WHEN A SPECIFIC MESSAGE IS RECEIVED
 	switch (msgAddress){
-		case "/muse/elements/experimental/concentration": 
-			Debug.Log("Conentration");
+		case "/muse/elements/beta_relative": 
+			Debug.Log("Concentration Level: ");
 			//var value = msgValue * 10;
-			Rotate(msgValue);
-			//Debug.Log("one: " + beta_values[0] + " two : " +  beta_values[1] +
-			// " three: " + beta_values[2] + " four: " + beta_values[4]);
-			//Rotate(beta_values[2]);
+			//if(GameManager.instance.device == true)
+				Rotate(concentration*10);
+			
+			//Rotate(concentration);
 		default:
-			Debug.Log("Not concentrating");
+			Debug.Log(concentration);
 			//Rotate(oscMessage.Values[2]);
 			break;
 	}
@@ -73,7 +78,7 @@ public function AllMessageHandler(oscMessage: OscMessage){
 
 
 //FUNCTIONS CALLED BY MATCHING A SPECIFIC MESSAGE IN THE ALLMESSAGEHANDLER FUNCTION
-public function Rotate(msgValue) : void //rotate the cube around its axis
+public function Rotate(concentration) : void //rotate the cube around its axis
 {
-	yRot = msgValue;
+	yRot = concentration;
 }

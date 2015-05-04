@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 	public class GameManager : MonoBehaviour {
@@ -14,6 +14,7 @@ using System.Collections;
 		public bool carrotPlanted;
 		public bool turnipPlanted;
 	    public int count = 0;
+		public float previousBeta;
 
 		public bool device;
 		
