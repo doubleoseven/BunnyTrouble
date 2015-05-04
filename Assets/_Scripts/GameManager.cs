@@ -14,8 +14,6 @@ using System.Collections;
 		public bool carrotPlanted;
 		public bool turnipPlanted;
 	    public int count = 0;
-
-		public int bunniesSaved;
 		
 		
 		private int level = 1;
@@ -29,7 +27,6 @@ using System.Collections;
 		{
 			numbersSelected = new int[] {0, 0, 0, 0};
 			counter = 0;
-			bunniesSaved = 0;
 			tileSelected = false;
 			plantSelected = false;
 			carrotPlanted = false;

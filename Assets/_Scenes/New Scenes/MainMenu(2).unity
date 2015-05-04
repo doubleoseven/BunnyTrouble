@@ -289,7 +289,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c2f72bd9ea0b441008e79d6ccf6f81d8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .519999981
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -573,7 +573,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
