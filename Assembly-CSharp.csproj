@@ -49,11 +49,12 @@
      <Compile Include="Assets\_Scripts\AspectRatio.cs" />
      <Compile Include="Assets\_Scripts\BoardManager.cs" />
      <Compile Include="Assets\_Scripts\BunnyEating.cs" />
+     <Compile Include="Assets\_Scripts\ButtonSound.cs" />
      <Compile Include="Assets\_Scripts\DontDestroy.cs" />
      <Compile Include="Assets\_Scripts\Element.cs" />
      <Compile Include="Assets\_Scripts\EnemyManager.cs" />
-     <Compile Include="Assets\_Scripts\EnemySpawnController.cs" />
      <Compile Include="Assets\_Scripts\GameManager.cs" />
+     <Compile Include="Assets\_Scripts\GameOver.cs" />
      <Compile Include="Assets\_Scripts\Grid.cs" />
      <Compile Include="Assets\_Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\_Scripts\LoadOnClick2.cs" />

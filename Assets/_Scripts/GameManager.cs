@@ -32,6 +32,7 @@ using System.Collections;
 			carrotPlanted = false;
 			turnipPlanted = false;
 			result = 0;
+		     count = 0;
 			//ensures there is only one instance of the object
 			if (instance == null) {
 				instance = this;

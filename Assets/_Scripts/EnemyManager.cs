@@ -4,13 +4,13 @@ public class EnemyManager : MonoBehaviour
 {
     //public PlayerHealth playerHealth;
     public GameObject enemy;
-    public float spawnTime = 6f;
+    public float spawnTime = 15f;
     public Transform[] spawnPoints;
 
 
     void Start ()
     {
-        InvokeRepeating ("Spawn", spawnTime, 15);
+        InvokeRepeating ("Spawn", spawnTime, Random.Range (15,30));
     }
 
 

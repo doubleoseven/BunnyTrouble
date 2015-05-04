@@ -12,7 +12,7 @@ TagManager:
   - scroll
   - numberone
   - plantButton
-  - EnemySpawnPoint
+  - cube
   layers:
   - Default
   - TransparentFX
