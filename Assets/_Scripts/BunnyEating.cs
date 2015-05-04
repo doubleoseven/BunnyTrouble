@@ -45,12 +45,17 @@ public class BunnyEating : MonoBehaviour {
 			}
 
 			if (GetComponent<bunnyHealth> ().isDead) {
+				GameManager.instance.bunniesSaved +=1;
 				anim.Play ("AngelBunny");
 				Invoke ("DestroyObject", 1);
 			}
 		}
 	}
 
+	void OnCollisionExit(){
+		anim.Play ("moving");
+	}
+		
 		
 	public void DestroyObject (){
 		Destroy (gameObject);

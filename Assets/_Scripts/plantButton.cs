@@ -11,17 +11,17 @@ public class plantButton : MonoBehaviour {
 				if(GameManager.instance.correct){
 					if(GameManager.instance.getPlantType() == "carrot"){
 						//if(soundEffectsManager._instance!=null)
-						//soundEffectsManager._instance.playCorrect();
+						soundEffectsManager._instance.playCorrect();
 						GameManager.instance.carrotPlanted = true;
 					}
 					else if(GameManager.instance.getPlantType() == "turnip"){
 						//if(soundEffectsManager._instance!=null)
-						//soundEffectsManager._instance.playCorrect();
+						soundEffectsManager._instance.playCorrect();
 						GameManager.instance.turnipPlanted = true;
 					}
 				} else {
 					//if(soundEffectsManager._instance!=null)
-					//soundEffectsManager._instance.playWrong();
+					soundEffectsManager._instance.playWrong();
 					Debug.Log ("Result not correct");
 					GameManager.instance.tileSelected = false;
 				}

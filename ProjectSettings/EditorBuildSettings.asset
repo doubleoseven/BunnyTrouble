@@ -6,8 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/New Scenes/level1.unity
-  - enabled: 1
     path: Assets/_Scenes/New Scenes/MainMenu(2).unity
   - enabled: 1
     path: Assets/_Scenes/New Scenes/homeScreen.unity
@@ -16,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/New Scenes/credits.unity
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/_Scenes/New Scenes/gameOver.unity
+=======
+    path: Assets/_Scenes/New Scenes/level1.unity
+  - enabled: 1
+    path: Assets/_Scenes/New Scenes/winScene.unity
+>>>>>>> origin/master
