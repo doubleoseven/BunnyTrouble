@@ -157,7 +157,7 @@ MonoBehaviour:
   SendToPort: 9000
   ListenerPort: 5000
   controller: {fileID: 0}
-  gameReceiver: 43756265
+  gameReceiver: Cube
 --- !u!4 &222520412
 Transform:
   m_ObjectHideFlags: 0
