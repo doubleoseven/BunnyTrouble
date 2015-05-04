@@ -71,7 +71,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
   plants:
   - {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-  - {fileID: 185326, guid: 2298fff7f31e54d0ca5731555a138565, type: 2}
+  - {fileID: 138464, guid: 2298fff7f31e54d0ca5731555a138565, type: 2}
+  - {fileID: 162644, guid: ea40ce33d0d494c5baeb346b25bfd3e4, type: 2}
+  - {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
   value: 0
   carrotPlanted: 0
   turnipPlanted: 0
@@ -101,8 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30c61f9190e24f628dc87f77604fb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrong: {fileID: 8300000, guid: daeaecaa838904be5b36563a8c386b62, type: 3}
-  correct: {fileID: 8300000, guid: 70445814e5cde4d2386d707bdbdee5da, type: 3}
 --- !u!212 &21226460
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -125,7 +125,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1512720497
+  m_SortingLayerID: -893413261
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 548daf6b872b741989c6b467653ad385, type: 3}
   m_Color: {r: .760784388, g: .760784388, b: .760784388, a: 1}

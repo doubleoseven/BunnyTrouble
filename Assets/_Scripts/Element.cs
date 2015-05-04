@@ -90,19 +90,35 @@ public class Element : MonoBehaviour
 	
 
 	void Update(){
-		if (GameManager.instance.carrotPlanted == true && tile.getCurrentSelected()) {
+		if (GameManager.instance.vegtablePlanted == "carrot" && tile.getCurrentSelected()) {
 			plantVegtable (0);
 			tile.setCurrentSelected(false);
 			tile.setVegtablePlanted(true);
 			GameManager.instance.tileSelected = false;
-			GameManager.instance.carrotPlanted = false;
-		} else if (GameManager.instance.turnipPlanted == true && tile.getCurrentSelected()) {
+			GameManager.instance.vegtablePlanted = null;
+		} else if (GameManager.instance.vegtablePlanted == "turnip" && tile.getCurrentSelected()) {
 			plantVegtable(1);
 			tile.setCurrentSelected(false);
 			tile.setVegtablePlanted(true);
 			GameManager.instance.tileSelected = false;
-			GameManager.instance.turnipPlanted = false;
+			GameManager.instance.vegtablePlanted = null;
 		}
+		else if (GameManager.instance.vegtablePlanted == "tomatoes" && tile.getCurrentSelected()) {
+			plantVegtable(2);
+			tile.setCurrentSelected(false);
+			tile.setVegtablePlanted(true);
+			GameManager.instance.tileSelected = false;
+			GameManager.instance.vegtablePlanted = null;
+		}
+		else if (GameManager.instance.vegtablePlanted == "pumpkin" && tile.getCurrentSelected()) {
+			plantVegtable(3);
+			tile.setCurrentSelected(false);
+			tile.setVegtablePlanted(true);
+			GameManager.instance.tileSelected = false;
+			GameManager.instance.vegtablePlanted = null;
+		}
+
+
 
 		if (tile.getVegtablePlanted () == false) {
 			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);

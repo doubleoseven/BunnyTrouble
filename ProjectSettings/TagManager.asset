@@ -53,9 +53,12 @@ TagManager:
   - name: Background
     uniqueID: 2782246799
     locked: 0
-  - name: Grid
+  - name: UI
     uniqueID: 2930092137
     locked: 0
-  - name: Enemies
+  - name: Grid
     uniqueID: 3401554035
+    locked: 0
+  - name: Enemies
+    uniqueID: 1021274635
     locked: 0

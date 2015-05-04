@@ -11,10 +11,10 @@ using System.Collections;
 		private int[] numbersSelected; //Array of numbers selected
 		private int counter; //keeps track of the index of numbers selected
 		private int result; //Keeps track of the result of the numbers selected
-		public bool carrotPlanted;
-		public bool turnipPlanted;
-	    public int count = 0;
-		
+		public string vegtablePlanted;
+		public int bunniesSaved;
+		public int bunniesCrossedOver;
+			
 		
 		private int level = 1;
 
@@ -27,12 +27,14 @@ using System.Collections;
 		{
 			numbersSelected = new int[] {0, 0, 0, 0};
 			counter = 0;
+			bunniesSaved = 0;
+			bunniesCrossedOver = 0;
 			tileSelected = false;
 			plantSelected = false;
-			carrotPlanted = false;
-			turnipPlanted = false;
+			vegtablePlanted = null;
+			//turnipPlanted = false;
 			result = 0;
-		     count = 0;
+		    //count = 0;
 			//ensures there is only one instance of the object
 			if (instance == null) {
 				instance = this;
