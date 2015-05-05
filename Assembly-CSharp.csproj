@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\_Scripts\AspectRatio.cs" />
      <Compile Include="Assets\_Scripts\BoardManager.cs" />
+     <Compile Include="Assets\_Scripts\BunniesToSave.cs" />
      <Compile Include="Assets\_Scripts\BunnyEating.cs" />
      <Compile Include="Assets\_Scripts\ButtonSound.cs" />
      <Compile Include="Assets\_Scripts\DontDestroy.cs" />
