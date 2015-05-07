@@ -14,7 +14,9 @@ using System.Collections;
 		public string vegtablePlanted;
 		public int bunniesSaved;
 		public int bunniesCrossedOver;
+
 		public float previousBeta;
+		public float beta;
 
 		public bool device;
 		

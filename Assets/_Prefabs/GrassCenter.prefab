@@ -58,17 +58,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   percentage: 1
   numberTextures:
+  - {fileID: 21300000, guid: e8a280005690a45b6a158fe101fadc60, type: 3}
+  - {fileID: 21300000, guid: 1a30a0b93eed9457ca25d9f3592ad976, type: 3}
   - {fileID: 21300000, guid: b47e72082e4a344b0ae173e349c86f29, type: 3}
-  - {fileID: 21300000, guid: 55e88f4c2c8974dcd8fbe6a6066ff93f, type: 3}
-  - {fileID: 21300000, guid: c30fa8dd441f24d17a177a2128b8a7d5, type: 3}
-  - {fileID: 21300000, guid: 2ca10705dfa9f4c00bff0c681289bf65, type: 3}
-  - {fileID: 21300000, guid: 7f4b1ff8ea1df42858257269bc4ca952, type: 3}
-  - {fileID: 21300000, guid: b39e3998c07154f71b65cb7ef42368f8, type: 3}
-  - {fileID: 21300000, guid: 1ebda0aef3bcd4da6a25b3568b97e528, type: 3}
-  - {fileID: 21300000, guid: 2947df62b2bdb40d9b33c83a470ccffe, type: 3}
-  - {fileID: 21300000, guid: 80e132e9c904f4ca8aa514bf3a78c7a5, type: 3}
-  - {fileID: 21300000, guid: da82b7985fb244dcebef16e8679be2a2, type: 3}
-  - {fileID: 21300000, guid: 5eb82c97ab1474a7881095f566712430, type: 3}
   plants:
   - {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
   - {fileID: 138464, guid: 2298fff7f31e54d0ca5731555a138565, type: 2}

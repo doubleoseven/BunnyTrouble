@@ -17,7 +17,7 @@ public class Element : MonoBehaviour
 	selectTile tile;
 	void Start () {
 		tile = GetComponent<selectTile> ();
-		percentage = Random.value <.20;
+		percentage = Random.value <.35;
 
 		for (int i = 0; i<numberTextures.Length; i++) 
 		{
@@ -81,6 +81,10 @@ public class Element : MonoBehaviour
 			value = 6;
 		else if (type == "five")
 			value = 5;
+		else if (type == "four")
+			value = 4;
+		else if (type == "three")
+			value = 3;
 	}
 
 	public void setCurrentSelected(bool selected)

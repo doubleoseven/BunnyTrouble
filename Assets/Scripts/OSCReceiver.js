@@ -8,6 +8,7 @@ public var gameReceiver = "Cube"; //the tag of the object on stage that you want
 private var handler : Osc;
 private var concentration: float;
 private var forehead: int;
+private var rotation: float;
 //private var beta_values: float;
 
 //VARIABLES YOU WANT TO BE ANIMATED
@@ -65,7 +66,13 @@ public function AllMessageHandler(oscMessage: OscMessage){
 			Debug.Log("Concentration Level: ");
 			//var value = msgValue * 10;
 			//if(GameManager.instance.device == true)
-				Rotate(concentration*10);
+			//GameManager.instance.beta = concentration*10;
+			concentration = oscMessage.Values[2];
+			GameManager.instance.previousBeta = GameManager.instance.beta;
+			GameManager.instance.beta = concentration*10;
+			rotation = Mathf.Lerp(GameManager.instance.previousBeta, GameManager.instance.beta, 0.5);
+			Rotate(rotation);
+
 			
 			//Rotate(concentration);
 		default:
@@ -74,8 +81,8 @@ public function AllMessageHandler(oscMessage: OscMessage){
 			break;
 	}
 
-}
 
+}
 
 //FUNCTIONS CALLED BY MATCHING A SPECIFIC MESSAGE IN THE ALLMESSAGEHANDLER FUNCTION
 public function Rotate(concentration) : void //rotate the cube around its axis
