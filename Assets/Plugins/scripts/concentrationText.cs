@@ -16,7 +16,7 @@ public class concentrationText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		beta = DeviceManager.instance.beta * 10;
-		concentration.text = Mathf.RoundToInt(beta) + "%";
+		beta = DeviceManager.instance.beta * 10; //Multilpy by ten to display a percentage value 
+		concentration.text = Mathf.RoundToInt(beta) + "%"; //Rounds the beta off to an integer
 	}
 }

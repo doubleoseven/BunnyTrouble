@@ -114,7 +114,16 @@ using System.Collections;
 			HideNotConnectedScreen();
 		}
 
+		if (bunniesCrossedOver == 5) {
+			GameOver();
+		}
 	}
+	
+	
+	void GameOver(){
+		Application.LoadLevel ("gameOver");
+	}
+	
 	void HideNotConnectedScreen(){
 		screenOverlay.SetActive (false);
 		notConnected = false;

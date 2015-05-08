@@ -2,16 +2,17 @@
 using System.Collections;
 
 public class GameOver : MonoBehaviour {
-	public int count=0;
+	//public int count=0;
 
-	public void update(){
+	public void Update(){
 
-		if (this.gameObject.transform.position.x == -3.0f) {
-			//GameManager.instance.count = +1;
-			GameManager.instance.bunniesCrossedOver+=1;
+		if (((int)gameObject.transform.position.x) == 0) {
+			
+			GameManager.instance.bunniesCrossedOver++;
 			Destroy(gameObject);
-			if (GameManager.instance.bunniesCrossedOver == 5)
-				Application.LoadLevel ("gameOver");
+			/*
+            if (GameManager.instance.count == 5){
+                Application.LoadLevel ("gameOver");} */
 		}
 	}
 		
