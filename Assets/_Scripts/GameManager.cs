@@ -14,6 +14,8 @@ using System.Collections;
 		public string vegtablePlanted;
 		public int bunniesSaved;
 		public int bunniesCrossedOver;
+	    public float count;
+
 			
 		
 		private int level = 1;

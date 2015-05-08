@@ -2,12 +2,8 @@
 using System.Collections;
 
 public class enemyMovement : MonoBehaviour {
-//CharacterController controller;
 
 	public float speed ;
-
-
-
 
 	void Update () {
 
