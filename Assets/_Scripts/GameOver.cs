@@ -2,16 +2,18 @@
 using System.Collections;
 
 public class GameOver : MonoBehaviour {
-	public int count=0;
-	GameObject bunny = GameObject.Find("bunny(Clone)");
+	//public int count= 0;
+	//GameObject bunny = 
 
-	public void update(){
+	public void Update(){
+		//Debug.Log (gameObject.transform.position.x);
+		if (((int)gameObject.transform.position.x) == -4) {
 
-		 if (((int)bunny.transform.position.x) == -3) {
-
-			count++;
-			if (count == 5){
-				Application.LoadLevel ("gameOver");}
+			GameManager.instance.count++;
+			Destroy(gameObject);
+			/*
+			if (GameManager.instance.count == 5){
+				Application.LoadLevel ("gameOver");} */
 		}
 	}
 		

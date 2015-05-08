@@ -14,7 +14,7 @@ using System.Collections;
 		public string vegtablePlanted;
 		public int bunniesSaved;
 		public int bunniesCrossedOver;
-	    public float count;
+	    public int count;
 
 			
 		
@@ -29,6 +29,7 @@ using System.Collections;
 		{
 			numbersSelected = new int[] {0, 0, 0, 0};
 			counter = 0;
+			count = 0;
 			bunniesSaved = 0;
 			bunniesCrossedOver = 0;
 			tileSelected = false;
@@ -96,12 +97,20 @@ using System.Collections;
 
 			
 
-		void InitGame()
-		{
-			boardScript.SetupScene (level);
-		}
+	void InitGame()
+	{
+		boardScript.SetupScene (level);
+	}
 		// Update is called once per frame
-		void Update () {
+	void Update () {
+		if (count == 5) {
+			GameOver();
 		}
 	}
+
+
+	void GameOver(){
+		Application.LoadLevel ("gameOver");
+	}
+}
 
