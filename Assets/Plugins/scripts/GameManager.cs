@@ -14,11 +14,11 @@ using System.Collections;
 		public string vegtablePlanted;
 		public int bunniesSaved;
 		public int bunniesCrossedOver;
+		public bool notConnected;
 
-		public float previousBeta;
-		public float beta;
+		public GameObject screenOverlay;
 
-		public bool device;
+		
 		
 
 		
@@ -46,9 +46,12 @@ using System.Collections;
 				instance = this;
 			} else if (instance != this)
 				Destroy (gameObject);
-			//DontDestroyOnLoad (gameObject);//Prevents the object from being destroyed 
+				//DontDestroyOnLoad (gameObject);//Prevents the object from being destroyed 
+			if (DeviceManager.instance.device == false){
+				ShowNotConnectedScreen();
+			}
 			boardScript = GetComponent<BoardManager>();
-			InitGame ();
+			InitGame();
 		}
 
 		//Getters and Setters!
@@ -105,7 +108,23 @@ using System.Collections;
 			boardScript.SetupScene (level);
 		}
 		// Update is called once per frame
-		void Update () {
+	void Update () {
+		if(DeviceManager.instance.device == true)
+		{
+			HideNotConnectedScreen();
 		}
+
+	}
+	void HideNotConnectedScreen(){
+		screenOverlay.SetActive (false);
+		notConnected = false;
+	}
+
+	void ShowNotConnectedScreen(){
+		screenOverlay.SetActive (true);
+		notConnected = true;
+	}
+
+		
 	}
 

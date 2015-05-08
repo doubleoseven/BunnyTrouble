@@ -49,12 +49,12 @@ public function AllMessageHandler(oscMessage: OscMessage){
 	if(msgAddress == "/muse/elements/touching_forehead")
 	{
 		if(concentration == 1) {
-			GameManager.instance.device = true;
+			DeviceManager.instance.device = true;
 			Debug.Log("Device Connected");
 		}
 		else {
 			Debug.Log("Please adjust the headset so that all channels are receiving data");
-			GameManager.instance.device = false;
+			DeviceManager.instance.device = false;
 			}
 	}
 	
@@ -68,9 +68,9 @@ public function AllMessageHandler(oscMessage: OscMessage){
 			//if(GameManager.instance.device == true)
 			//GameManager.instance.beta = concentration*10;
 			concentration = oscMessage.Values[2];
-			GameManager.instance.previousBeta = GameManager.instance.beta;
-			GameManager.instance.beta = concentration*10;
-			rotation = Mathf.Lerp(GameManager.instance.previousBeta, GameManager.instance.beta, 0.5);
+			DeviceManager.instance.previousBeta = DeviceManager.instance.beta;
+			DeviceManager.instance.beta = concentration*10;
+			rotation = Mathf.Lerp(DeviceManager.instance.previousBeta, DeviceManager.instance.beta, 0.5);
 			Rotate(rotation);
 
 			

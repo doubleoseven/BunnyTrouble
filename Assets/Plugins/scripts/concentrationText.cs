@@ -16,7 +16,7 @@ public class concentrationText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		beta = GameManager.instance.beta * 10;
+		beta = DeviceManager.instance.beta * 10;
 		concentration.text = Mathf.RoundToInt(beta) + "%";
 	}
 }
