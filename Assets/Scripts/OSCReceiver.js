@@ -25,7 +25,8 @@ public function Start ()
 }
 Debug.Log("Running");
 
-function Update () {
+function Update () 
+{
 	var go = GameObject.Find(gameReceiver);
 	go.transform.Rotate(0, yRot, 0);
 }
@@ -45,14 +46,16 @@ public function AllMessageHandler(oscMessage: OscMessage){
 
 	if(msgAddress == "/muse/elements/touching_forehead")
 	{
-		if(concentration == 1) {
+		if(concentration == 1) 
+		{
 			DeviceManager.instance.device = true; //Device Manager is a C# script. It has a variable called deivce. 
 			Debug.Log("Device Connected");
 		}
-		else {
+		else 
+		{
 			Debug.Log("Please adjust the headset so that all channels are receiving data");
 			DeviceManager.instance.device = false;
-			}
+		}
 	}
 	
 	
