@@ -10,7 +10,7 @@ public class EnemyManager : MonoBehaviour
 
     void Start ()
     {
-		InvokeRepeating ("Spawn", spawnTime, Random.Range (15, 20));
+		InvokeRepeating ("Spawn", spawnTime, Random.Range (15, 30));
 	}
     void Spawn ()
     {
