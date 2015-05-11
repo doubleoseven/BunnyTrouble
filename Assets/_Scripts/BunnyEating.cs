@@ -29,7 +29,10 @@ public class BunnyEating : MonoBehaviour {
 			//anim.Play ("eating");
 			Debug.Log ("eating1");
 			//
+			if(!GetComponent<bunnyHealth>().isDead)
+			{
 			coll.gameObject.GetComponent<plantHealth> ().doDamage (plantDamage);
+			}
 			GetComponent<bunnyHealth> ().doDamage (bunnyDamage);
 
 			nextAttack = Time.time + attackDelay;
