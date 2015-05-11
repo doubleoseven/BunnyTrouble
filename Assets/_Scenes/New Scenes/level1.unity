@@ -600,7 +600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0e6866417e9483ca13bc0353e97397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
 --- !u!50 &143962544
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -729,7 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d4734f252554bbfa5f5c4568cbc329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bunniesToSave: 12
+  bunniesToSave: 9
   bunniesLeft: 0
 --- !u!114 &168801362
 MonoBehaviour:
@@ -756,7 +755,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 12
+  m_Text: 
 --- !u!222 &168801363
 CanvasRenderer:
   m_ObjectHideFlags: 0

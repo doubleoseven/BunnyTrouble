@@ -7,14 +7,15 @@ public class GameOver : MonoBehaviour {
 
 	public void Update(){
 		//Debug.Log (gameObject.transform.position.x);
-		if (((int)gameObject.transform.position.x) == -4) {
-
-			GameManager.instance.count++;
+		if (((int)gameObject.transform.position.x) == -5) {
 			Destroy(gameObject);
-			/*
-			if (GameManager.instance.count == 5){
-				Application.LoadLevel ("gameOver");} */
+			GameManager.instance.count+=1;
+
+
+
 		}
+	if (GameManager.instance.count == 5){
+			Application.LoadLevel (5);} 
 	}
 		
 }

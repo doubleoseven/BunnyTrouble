@@ -6,7 +6,7 @@ public class bunnyHealth : MonoBehaviour
 	private SpriteRenderer spriteRenderer; 
 
 	[SerializeField]
-	int currentHealth = 30;
+	int currentHealth = 20;
 	public bool dead = false;
    // public bool move= true;
 

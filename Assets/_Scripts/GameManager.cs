@@ -37,7 +37,7 @@ using System.Collections;
 			vegtablePlanted = null;
 			//turnipPlanted = false;
 			result = 0;
-		    //count = 0;
+
 			//ensures there is only one instance of the object
 			if (instance == null) {
 				instance = this;
@@ -102,15 +102,9 @@ using System.Collections;
 		boardScript.SetupScene (level);
 	}
 		// Update is called once per frame
-	void Update () {
-		if (count == 5) {
-			GameOver();
-		}
-	}
 
 
-	void GameOver(){
-		Application.LoadLevel ("gameOver");
-	}
+
+
 }
 
