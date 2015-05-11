@@ -15,18 +15,17 @@ using System.Collections;
 		public int bunniesSaved;
 		public int bunniesCrossedOver;
 	    public int count;
+		public bool pause;
 
+		public GameObject pauseOverlay;
 			
 		
 		private int level = 1;
 
-		// Use this for initialization
-		void Start () {
-		
-		}
 
 		void Awake()
 		{
+			pause = false;
 			numbersSelected = new int[] {0, 0, 0, 0};
 			counter = 0;
 			count = 0;
@@ -101,7 +100,14 @@ using System.Collections;
 	{
 		boardScript.SetupScene (level);
 	}
-		// Update is called once per frame
+
+	void Update()
+	{
+		if (pause) {
+			pauseOverlay.SetActive (true);
+		} else
+			pauseOverlay.SetActive(false);
+	}
 
 
 

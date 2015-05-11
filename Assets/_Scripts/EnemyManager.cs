@@ -10,7 +10,7 @@ public class EnemyManager : MonoBehaviour
 
     void Start ()
     {
-		InvokeRepeating ("Spawn", spawnTime, Random.Range (15, 30));
+		InvokeRepeating ("Spawn", spawnTime, Random.Range (15, 26));
 	}
     void Spawn ()
     {
@@ -19,8 +19,10 @@ public class EnemyManager : MonoBehaviour
          //   return;
        // }
 
-        int spawnPointIndex = Random.Range (0, spawnPoints.Length);
+		if (!GameManager.instance.pause) {
+			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 
-        Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+			Instantiate (enemy, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+		}
     }
 }

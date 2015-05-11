@@ -10,9 +10,6 @@ public class GameOver : MonoBehaviour {
 		if (((int)gameObject.transform.position.x) == -5) {
 			Destroy(gameObject);
 			GameManager.instance.count+=1;
-
-
-
 		}
 	if (GameManager.instance.count == 5){
 			Application.LoadLevel (5);} 

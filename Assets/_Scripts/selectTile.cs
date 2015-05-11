@@ -26,7 +26,7 @@ public class selectTile : MonoBehaviour {
 
 	private void OnMouseDown()
 	{
-		if (GameManager.instance.tileSelected == false && currentSelected == false && vegtablePlanted == false) {
+		if (GameManager.instance.tileSelected == false && currentSelected == false && vegtablePlanted == false && !GameManager.instance.pause) {
 			GameManager.instance.tileSelected = true;
 			currentSelected = true;
 			GameManager.instance.setTileSelectedValue(element.getValue());
