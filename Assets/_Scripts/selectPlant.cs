@@ -7,7 +7,7 @@ public class selectPlant : MonoBehaviour {
 	private void OnMouseDown(){
 		if (GameManager.instance.plantSelected == false && currentSelected == false && 
 		    GameManager.instance.tileSelected == true && GameManager.instance.getResult()>0) {
-
+			soundEffectsManager._instance.playButtonClick2();
 			GameManager.instance.plantSelected = true;
 			currentSelected = true;
 			GameManager.instance.setPlantType(gameObject.name);
@@ -16,6 +16,7 @@ public class selectPlant : MonoBehaviour {
 
 		} else if(GameManager.instance.plantSelected == true && currentSelected == true)
 		{
+			soundEffectsManager._instance.playButtonClick2();
 			Debug.Log (gameObject.name);
 			GameManager.instance.plantSelected = false;
 			currentSelected = false;

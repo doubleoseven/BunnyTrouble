@@ -99,7 +99,6 @@ GameObject:
   - 124: {fileID: 79228404}
   - 92: {fileID: 79228403}
   - 81: {fileID: 79228402}
-  - 114: {fileID: 79228401}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -107,17 +106,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &79228401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 79228400}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f186d4fa551824ffead7363909ae04c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!81 &79228402
 AudioListener:
   m_ObjectHideFlags: 0
@@ -258,8 +246,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 613694602}
   - 82: {fileID: 613694601}
-  - 82: {fileID: 613694603}
   - 114: {fileID: 613694600}
+  - 114: {fileID: 613694604}
+  - 82: {fileID: 613694603}
   m_Layer: 0
   m_Name: MenuMusic
   m_TagString: GameMusic
@@ -428,6 +417,22 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &613694604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613694599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fbabdc9097e14605ab4f5939066c561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 613694603}
+  correct: {fileID: 8300000, guid: 70445814e5cde4d2386d707bdbdee5da, type: 3}
+  wrong: {fileID: 8300000, guid: daeaecaa838904be5b36563a8c386b62, type: 3}
+  buttonClick: {fileID: 8300000, guid: 3a3040a5678f14ecfbc8fe3cdee84acf, type: 3}
+  buttonClick2: {fileID: 8300000, guid: 19487f7ebba714b99bf33199384cc90b, type: 3}
 --- !u!1 &1127005984
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +579,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 613694604}
+        m_MethodName: playButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -995,6 +1012,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1899829364}
         m_MethodName: quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 613694604}
+        m_MethodName: playButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

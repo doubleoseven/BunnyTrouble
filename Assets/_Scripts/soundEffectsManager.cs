@@ -3,9 +3,11 @@ using System.Collections;
 
 public class soundEffectsManager : MonoBehaviour {
 
-	AudioSource soundEffect;
+	public AudioSource soundEffect;
 	public AudioClip correct;
 	public AudioClip wrong;
+	public AudioClip buttonClick;
+	public AudioClip buttonClick2;
 	public static soundEffectsManager _instance = null;
 	// Use this for initialization
 	void Start () {
@@ -24,25 +26,26 @@ public class soundEffectsManager : MonoBehaviour {
 		
 		DontDestroyOnLoad(this.gameObject) ;
 	}
-	
-	public void PlaySingle(AudioClip clip)
-	{
-		soundEffect.clip = clip;
-		soundEffect.pitch = 10;
-		soundEffect.Play ();
-		Debug.Log ("Played!");
-	}
 
-	public void playCorrect(){
+
+	public void playCorrect()
+	{
 		soundEffect.PlayOneShot (correct);
 	}
 
-	public void playWrong(){
+	public void playWrong()
+	{
 		soundEffect.PlayOneShot (wrong);
 	}
 
-	// Update is called once per frame
-	void Update () {
-	
+	public void playButtonClick()
+	{
+		soundEffect.PlayOneShot (buttonClick);
 	}
+
+	public void playButtonClick2() 
+	{
+		soundEffect.PlayOneShot (buttonClick2);
+	}
+	
 }
