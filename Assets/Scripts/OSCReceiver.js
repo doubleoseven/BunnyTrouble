@@ -27,8 +27,8 @@ Debug.Log("Running");
 
 function Update () 
 {
-	var go = GameObject.Find(gameReceiver);
-	go.transform.Rotate(0, yRot, 0);
+	//var go = GameObject.Find(gameReceiver);
+	//go.transform.Rotate(0, yRot, 0);
 }
 
 //These functions are called when messages are received
@@ -69,7 +69,7 @@ public function AllMessageHandler(oscMessage: OscMessage){
 			DeviceManager.instance.beta = concentration*10; //Store the current beta value in the Device Manager class
 			rotation = Mathf.Lerp(DeviceManager.instance.previousBeta, DeviceManager.instance.beta, 0.5);
 			//Lerping by 0.5 returns the average of previousBeta and Beta. Makes the cube spin more smoothly. 
-			Rotate(rotation);
+			//Rotate(rotation);
 
 		default:
 			Debug.Log(concentration);

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Element : MonoBehaviour 
 {
+	//Changes the sprite look of the tiles
 	public bool percentage;
 
 	public Sprite[] numberTextures;
