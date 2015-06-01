@@ -6,7 +6,7 @@ public class GameOver : MonoBehaviour {
 
 	public void Update(){
 
-		if (((int)gameObject.transform.position.x) == 0) {
+		if (((int)gameObject.transform.position.x) == -2) {
 			
 			GameManager.instance.bunniesCrossedOver++;
 			Destroy(gameObject);

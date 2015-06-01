@@ -58,7 +58,7 @@ using Random = UnityEngine.Random;      //Tells Random to use the Unity Engine r
 			boardHolder = new GameObject ("Board").transform;
 			
 			//Loop along x axis, starting from -1 (to fill corner) with floor or outerwall edge tiles.
-			for(int x = 2; x < (columns*2)+2; x+=2)
+			for(int x = 0; x < (columns*2); x+=2)
 			{
 				//Loop along y axis, starting from -1 to place floor or outerwall tiles.
 				for(int y = 0; y < rows*2; y+=2)

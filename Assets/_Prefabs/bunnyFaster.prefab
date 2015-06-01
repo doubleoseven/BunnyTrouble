@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11406318}
   - 61: {fileID: 6123406}
   - 50: {fileID: 5024426}
-  - 114: {fileID: 11442084}
+  - 114: {fileID: 11474778}
   m_Layer: 0
   m_Name: bunnyFaster
   m_TagString: enemy
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
---- !u!114 &11442084
+--- !u!114 &11474778
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 123214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc0e6866417e9483ca13bc0353e97397, type: 3}
+  m_Script: {fileID: 11500000, guid: e56c31cb7c0f54648997b214c402f181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11492244

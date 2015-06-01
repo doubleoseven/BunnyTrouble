@@ -107,17 +107,7 @@ using System.Collections;
 	{
 		boardScript.SetupScene (level);
 	}
-		// Update is called once per frame
 
-
-
-
-
-		void InitGame()
-		{
-			boardScript.SetupScene (level);
-		}
-		// Update is called once per frame
 	void Update () {
 		if(DeviceManager.instance.device == true)
 		{

@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11407086}
   - 61: {fileID: 6109580}
   - 50: {fileID: 5012154}
-  - 114: {fileID: 11422938}
+  - 114: {fileID: 11407208}
   m_Layer: 0
   m_Name: bunny
   m_TagString: enemy
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 30
   dead: 0
---- !u!114 &11422938
+--- !u!114 &11407208
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 185522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc0e6866417e9483ca13bc0353e97397, type: 3}
+  m_Script: {fileID: 11500000, guid: e56c31cb7c0f54648997b214c402f181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11432066
