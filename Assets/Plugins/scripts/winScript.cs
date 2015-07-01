@@ -16,7 +16,7 @@ public class winScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		bunniesLeft = bunniesToSave - GameManager.instance.bunniesSaved;
-		text.text = "Bunnies Left: " + bunniesLeft;
+		text.text = " " + bunniesLeft;
 		if (bunniesLeft <= 0) {
 			Application.LoadLevel(6);
 		}
