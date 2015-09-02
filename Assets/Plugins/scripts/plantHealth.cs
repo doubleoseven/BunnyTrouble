@@ -2,38 +2,45 @@
 using System.Collections;
 
 public class plantHealth : MonoBehaviour {
-	[SerializeField]
-	int currentHealth= 10;
+
+	public int startingHealth = 10;
+	public int currentHealth;
+
 	selectTile tile;
 	public int scoreValue= 5; 
 
+	bool damaged;
+
 	///public BunnyEating plantCount;
 
-	public bool IsPlantEaten= false ;
+	public bool IsPlantEaten;
 
-	void Start(){
+	void Start()
+	{
 		tile = gameObject.transform.GetComponentInParent<selectTile> ();
 	}
+
+	void Update()
+	{
+		if (currentHealth <= 0 && !IsPlantEaten) 
+		{	
+			Death();
+		} 
+	}
+
+
 	public void doDamage(int damageValue)
 	{  
-
-		
+		damaged = true;
 		currentHealth -= damageValue;
+	}
 
-		
-		// if health is 0 , plant eaten 
-		
-		if (currentHealth <= 0) {	
-			ScoreManager.score += scoreValue;
-			IsPlantEaten = true;
-			tile.setVegtablePlanted(false);
-			//GameManager.instance.count+=1;
-			Destroy(gameObject);
+	void Death()
+	{
+		IsPlantEaten = true;
+		ScoreManager.score += scoreValue;
+		tile.setVegtablePlanted (false);
 
-		
-
-
-		} 
-		//IsPlantEaten=false;
+		Destroy(gameObject);
 	}
 }

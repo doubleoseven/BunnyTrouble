@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6155120}
   - 114: {fileID: 11412368}
   - 50: {fileID: 5000404}
+  - 114: {fileID: 11496608}
   m_Layer: 0
   m_Name: tomatoes
   m_TagString: plant
@@ -70,9 +71,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048ebe6f628854844bc367baa57c3e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 10
   currentHealth: 10
   scoreValue: 5
   IsPlantEaten: 0
+--- !u!114 &11496608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ddcbb66ffc5544ffa5411e896ea6313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  timeBetweenDamage: .150000006
+  bunnyInRange: 0
 --- !u!212 &21294612
 SpriteRenderer:
   m_ObjectHideFlags: 1

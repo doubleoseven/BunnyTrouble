@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21210426}
   - 61: {fileID: 6194384}
   - 114: {fileID: 11472448}
+  - 114: {fileID: 11400386}
   - 50: {fileID: 5069548}
   m_Layer: 0
   m_Name: turnip
@@ -59,6 +60,20 @@ BoxCollider2D:
   m_Offset: {x: .300000012, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.70000005, y: 1.29999995}
+--- !u!114 &11400386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ddcbb66ffc5544ffa5411e896ea6313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  timeBetweenDamage: .150000006
+  bunnyInRange: 0
 --- !u!114 &11472448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,6 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048ebe6f628854844bc367baa57c3e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 10
   currentHealth: 10
   scoreValue: 5
   IsPlantEaten: 0

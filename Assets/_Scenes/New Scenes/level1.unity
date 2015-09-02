@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048ebe6f628854844bc367baa57c3e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 10
   currentHealth: 5
   scoreValue: 5
   IsPlantEaten: 0
@@ -5623,7 +5624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 185522, guid: 0c6bb1b8ead7e4339a138007ea10cb2c, type: 2}
   enemy1: {fileID: 123214, guid: bcfa1216f52594cf291216cf9a75b364, type: 2}
-  spawnTime: 15
+  spawnTime: 1
   spawnPoints:
   - {fileID: 1750858298}
   - {fileID: 1602542416}

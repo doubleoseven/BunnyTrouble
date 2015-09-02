@@ -5,33 +5,48 @@ public class bunnyHealth : MonoBehaviour
 {   
 	private SpriteRenderer spriteRenderer; 
 
-	[SerializeField]
-	int currentHealth = 20;
-	public bool dead = false;
+	public int startingHealth = 20;
+	public int currentHealth;
+
+	public bool dead;
+
+	Animator anim;
    // public bool move= true;
 
 
+	void Awake()
+	{
+		anim = GetComponent<Animator> ();
+		currentHealth = startingHealth;
+	}
+
 	public void doDamage(int damageValue)
 	{
+		if (isDead)
+			return;
 
 		currentHealth -= damageValue;
 
-		if (currentHealth < 0)
-			currentHealth = 0;
-
-
+		if (currentHealth <= 0) 
+		{
+			Death();
+		}
 
 	}
 
-	public bool isDead{
+	void Death()
+	{
+		dead = true;
+		GameManager.instance.bunniesSaved+=1;
+		anim.SetTrigger("transforming"); 
+		Destroy (gameObject, 2f);
+	}
+
+	public bool isDead
+	{
 		get{ return currentHealth <= 0;}
 	}
 
-	void Update(){
-		if (currentHealth <= 0) {
-			dead = true;
-		}	
-	}
 
 
 
