@@ -13,22 +13,24 @@ public class enemyMovement : MonoBehaviour
 	void Update () 
 	{
 		//If the player is not concentrating, then increase the speed movement
-		if (DeviceManager.instance.beta * 10 < 12) 
-		{
-			if (speed >= 1.5)
-			{
-				speed = 1.5f;
-			} else
-				speed += 0.01f;
-		} else 
-		{ //Else decrease the speed movement
-			if (speed <= 0.4)
-			{
-				speed = 0.4f;
-			} else 
-				speed -= 0.1f;
-		}
-		if (GetComponent<bunnyHealth> ().dead == false) 
+//		if (DeviceManager.instance.beta * 10 < 12) 
+//		{
+//			if (speed >= 1.5)
+//			{
+//				speed = 1.5f;
+//			} else
+//				speed += 0.01f;
+//		} else 
+//		{ //Else decrease the speed movement
+//			if (speed <= 0.4)
+//			{
+//				speed = 0.4f;
+//			} else 
+//				speed -= 0.1f;
+//		}
+
+
+		if (GetComponent<bunnyHealth> ().dead != true) 
 		{
 			transform.Translate (-Vector2.right * speed * (Time.deltaTime));
 		}

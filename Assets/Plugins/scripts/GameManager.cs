@@ -46,10 +46,7 @@ using System.Collections;
 				instance = this;
 			} else if (instance != this)
 				Destroy (gameObject);
-				//DontDestroyOnLoad (gameObject);//Prevents the object from being destroyed 
-			if (DeviceManager.instance.device == false){
-				ShowNotConnectedScreen();
-			}
+				
 			boardScript = GetComponent<BoardManager>();
 			InitGame();
 		}
@@ -109,11 +106,6 @@ using System.Collections;
 	}
 
 	void Update () {
-		if(DeviceManager.instance.device == true)
-		{
-			HideNotConnectedScreen();
-		}
-
 		if (bunniesCrossedOver == 5) {
 			GameOver();
 		}
@@ -124,15 +116,15 @@ using System.Collections;
 		Application.LoadLevel ("gameOver");
 	}
 	
-	void HideNotConnectedScreen(){
-		screenOverlay.SetActive (false);
-		notConnected = false;
-	}
-
-	void ShowNotConnectedScreen(){
-		screenOverlay.SetActive (true);
-		notConnected = true;
-	}
+//	void HideNotConnectedScreen(){
+//		screenOverlay.SetActive (false);
+//		notConnected = false;
+//	}
+//
+//	void ShowNotConnectedScreen(){
+//		screenOverlay.SetActive (true);
+//		notConnected = true;
+//	}
 
 		
 	}
