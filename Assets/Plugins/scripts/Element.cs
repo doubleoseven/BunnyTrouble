@@ -16,6 +16,7 @@ public class Element : MonoBehaviour
 	public bool turnipPlanted;
 
 	selectTile tile;
+
 	void Start () {
 		tile = GetComponent<selectTile> ();
 		percentage = Random.value <.35;
@@ -29,8 +30,6 @@ public class Element : MonoBehaviour
 			else 
 				loadTexture(Random.Range(0,i));
 		}
-
-	
 
 	}
 	public void loadTexture(int counter){

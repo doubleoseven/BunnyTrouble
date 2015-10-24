@@ -11,7 +11,7 @@ using System.Collections;
 		//length = arraysOfNumbersSeleted.Length;
 	}
 	// Use this for initialization
-	private void OnMouseUpAsButton()
+	public void SelectNumber()
 	{
 		if (gameObject.name == "numberOne" && GameManager.instance.tileSelected) {
 			if (arraysOfNumbersSeleted.Length <5 && GameManager.instance.getCounter()<4) {
@@ -26,7 +26,7 @@ using System.Collections;
 
 		else if (gameObject.name == "numberTwo" && GameManager.instance.tileSelected) {
 			if (arraysOfNumbersSeleted.Length< 5 && GameManager.instance.getCounter()<4) {
-				soundEffectsManager._instance.playButtonClick();
+				//soundEffectsManager._instance.playButtonClick();
 				Debug.Log (gameObject.name);
 				arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 2;
 				GameManager.instance.addResult(2);
@@ -37,7 +37,7 @@ using System.Collections;
 
 		else if (gameObject.name == "numberThree" && GameManager.instance.tileSelected) {
 			if(arraysOfNumbersSeleted.Length<5 && GameManager.instance.getCounter()<4){
-				soundEffectsManager._instance.playButtonClick();
+				//soundEffectsManager._instance.playButtonClick();
 				Debug.Log (gameObject.name);
 				arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 3;
 				GameManager.instance.addResult(3);

@@ -2,10 +2,13 @@ using UnityEngine;
 using System.Collections;
 
 	public class GameManager : MonoBehaviour {
+
 		public static GameManager instance = null;
-		private BoardManager boardScript;
+
 		public bool tileSelected;
-		public bool plantSelected; 
+		public bool plantSelected;
+		public GameObject tileObject;
+		private BoardManager boardScript;
 		private string plantType; //Keeps track of the pant selected
 		private int tileSelectedValue;//Keeps track of the value of the tile selected
 		private int[] numbersSelected; //Array of numbers selected

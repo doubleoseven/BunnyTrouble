@@ -7,11 +7,6 @@ public class selectTile : MonoBehaviour {
 	public bool vegtablePlanted;
 
 	Element element;
-	[SerializeField]
-	Sprite carrot;
-	[SerializeField]
-	Sprite turnip;
-	//plant = GameObject.FindGameObjectsWithTag("plant");
 
 
 	//private string tileSelectedName;
@@ -31,6 +26,7 @@ public class selectTile : MonoBehaviour {
 			currentSelected = true;
 			GameManager.instance.setTileSelectedValue(element.getValue());
 			//mouseOver = element.getSprite;
+			GameManager.instance.tileObject = gameObject;
 			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, .5f);
 		} 
 		else if(GameManager.instance.tileSelected == true&& currentSelected == true && vegtablePlanted == false)

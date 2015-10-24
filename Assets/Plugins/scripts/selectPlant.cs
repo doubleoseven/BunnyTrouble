@@ -1,45 +1,51 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class selectPlant : MonoBehaviour {
+
 	private bool currentSelected;
 
-	private void OnMouseDown(){
+	Color regularColor;
+
+	void Awake () {
+		currentSelected = false;
+		regularColor = new Color (1f, 1f, 1f, 1f);
+	}
+	
+	public void plantSelect(){
 		if (GameManager.instance.plantSelected == false && currentSelected == false && 
-		    GameManager.instance.tileSelected == true && GameManager.instance.getResult()>0) {
-			soundEffectsManager._instance.playButtonClick2();
+			GameManager.instance.tileSelected == true && GameManager.instance.getResult () > 0) 
+		{
+			soundEffectsManager._instance.playButtonClick2 ();
 			GameManager.instance.plantSelected = true;
 			currentSelected = true;
-			GameManager.instance.setPlantType(gameObject.name);
-			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, .5f);
+			GameManager.instance.setPlantType (gameObject.name);
 			Debug.Log (gameObject.name);
 
-		} else if(GameManager.instance.plantSelected == true && currentSelected == true)
+		} else if (GameManager.instance.plantSelected == true && currentSelected == true)
 		{
-			soundEffectsManager._instance.playButtonClick2();
+			soundEffectsManager._instance.playButtonClick2 ();
 			Debug.Log (gameObject.name);
 			GameManager.instance.plantSelected = false;
 			currentSelected = false;
-			GameManager.instance.setPlantType(null);
-			GetComponent<SpriteRenderer>().color = new Color (1f, 1f, 1f, 1f);
+			GameManager.instance.setPlantType (null);
 		}
+	}
 
-	}
-	// Use this for initialization
-	void Start () {
-		currentSelected = false;
-	
-	}
-	
-	// Update is called once per frame
 	void Update () {
 
 		if (GameManager.instance.tileSelected == false) {
-			GetComponent<SpriteRenderer>().color = new Color (1f, 1f, 1f, 1f);
+			GetComponent<Image> ().color = regularColor;
 			currentSelected = false; 
-			GameManager.instance.setPlantType(null);
+			GameManager.instance.setPlantType (null);
 			GameManager.instance.plantSelected = false;
 		}
-	
+
+	}
+
+	public bool IsCurrentSelected()
+	{
+		return currentSelected;
 	}
 }

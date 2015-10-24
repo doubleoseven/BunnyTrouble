@@ -58,9 +58,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   percentage: 1
   numberTextures:
-  - {fileID: 21300000, guid: e8a280005690a45b6a158fe101fadc60, type: 3}
-  - {fileID: 21300000, guid: 1a30a0b93eed9457ca25d9f3592ad976, type: 3}
-  - {fileID: 21300000, guid: b47e72082e4a344b0ae173e349c86f29, type: 3}
+  - {fileID: 21300000, guid: fbb429c10e35d4679afd22f7dfad9fb1, type: 3}
+  - {fileID: 21300000, guid: 54543bc78932546fdb4df0978530e674, type: 3}
+  - {fileID: 21300000, guid: 23fa9e087a88349f79d688330f04830a, type: 3}
   plants:
   - {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
   - {fileID: 138464, guid: 2298fff7f31e54d0ca5731555a138565, type: 2}
@@ -82,8 +82,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSelected: 0
   vegtablePlanted: 0
-  carrot: {fileID: 21300000, guid: 6d865e712c63a42e7974234112ead30e, type: 3}
-  turnip: {fileID: 21300000, guid: 21221c29516614bb0b35e7e6e4d6aa24, type: 3}
 --- !u!114 &11479428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,7 +117,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -893413261
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 548daf6b872b741989c6b467653ad385, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e86ef0a98ac2b4d37b5938f5ca2d95ec, type: 3}
   m_Color: {r: .760784388, g: .760784388, b: .760784388, a: 1}
 --- !u!1001 &100100000
 Prefab:
