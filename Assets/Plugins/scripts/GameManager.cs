@@ -8,6 +8,7 @@ using System.Collections;
 		public bool tileSelected;
 		public bool plantSelected;
 		public GameObject tileObject;
+
 		private BoardManager boardScript;
 		private string plantType; //Keeps track of the pant selected
 		private int tileSelectedValue;//Keeps track of the value of the tile selected
@@ -35,7 +36,7 @@ using System.Collections;
 		{
 			numbersSelected = new int[] {0, 0, 0, 0};
 			counter = 0;
-			count = 0;
+			///count = 0;
 			bunniesSaved = 0;
 			bunniesCrossedOver = 0;
 			tileSelected = false;

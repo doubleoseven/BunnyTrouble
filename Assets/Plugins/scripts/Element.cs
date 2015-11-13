@@ -1,26 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof(selectTile))]
 public class Element : MonoBehaviour 
 {
-	//Changes the sprite look of the tiles
-	public bool percentage;
-
+	// The numbers that will be used in the level
 	public Sprite[] numberTextures;
+	// The plants that will be used in the level
 	public GameObject[] plants;
 
+	// The number that is on the tile in form of a String
 	private string type;
-	public int value;
+	//A random number which will set the randomness of the numbers.
+	private bool percentage;
 
-	public bool carrotPlanted;
-	public bool turnipPlanted;
+	// the converted string into a integer
+	private int value;
 
 	selectTile tile;
 
 	void Start () {
+
 		tile = GetComponent<selectTile> ();
 		percentage = Random.value <.35;
+		loadNumbers ();
+	}
 
+	public void loadNumbers() 
+	{
 		for (int i = 0; i<numberTextures.Length; i++) 
 		{
 			if(percentage)
@@ -30,33 +37,22 @@ public class Element : MonoBehaviour
 			else 
 				loadTexture(Random.Range(0,i));
 		}
-
 	}
+
 	public void loadTexture(int counter){
 
 		GetComponent<SpriteRenderer> ().sprite = numberTextures [counter];
 		GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
 		type = numberTextures [counter].name; 
 		setValue (type);
-	}
 
+	}
 	public void plantVegtable(int index){
 		GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0f);
-		GameObject vegtale = Instantiate (plants [index], gameObject.transform.position, gameObject.transform.rotation) as GameObject;
-		vegtale.transform.SetParent (gameObject.transform);
+		GameObject vegtable = Instantiate (plants [index], gameObject.transform.position, gameObject.transform.rotation) as GameObject;
+		vegtable.transform.SetParent (gameObject.transform);
 	}
-
-	public int getValue(){
-		return value;
-	}
-
-	public void setCarrotPlanted (bool planted){
-		carrotPlanted = planted;
-	}
-
-	public void setTurnipPlanted(bool planted){
-		turnipPlanted = planted;
-	}
+	
 
 	public void setValue(string type){
 		if (type == "fifteen")
@@ -87,12 +83,10 @@ public class Element : MonoBehaviour
 			value = 3;
 	}
 
-	public void setCurrentSelected(bool selected)
-	{
-		tile.setCurrentSelected (selected);
+	public int getValue(){
+		return value;
 	}
 	
-
 	void Update(){
 		if (GameManager.instance.vegtablePlanted == "carrot" && tile.getCurrentSelected()) {
 			plantVegtable (0);
@@ -121,9 +115,6 @@ public class Element : MonoBehaviour
 			GameManager.instance.tileSelected = false;
 			GameManager.instance.vegtablePlanted = null;
 		}
-
-
-
 		if (tile.getVegtablePlanted () == false) {
 			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
 		}

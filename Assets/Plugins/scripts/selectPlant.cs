@@ -14,23 +14,33 @@ public class selectPlant : MonoBehaviour {
 	}
 	
 	public void plantSelect(){
-		if (GameManager.instance.plantSelected == false && currentSelected == false && 
-			GameManager.instance.tileSelected == true && GameManager.instance.getResult () > 0) 
+
+		if (canCurrentPlantBeSelected() == false && AreOtherConditionsMet()) 
 		{
-			soundEffectsManager._instance.playButtonClick2 ();
+			SoundEffectsManager._instance.playButtonClick2 ();
 			GameManager.instance.plantSelected = true;
 			currentSelected = true;
 			GameManager.instance.setPlantType (gameObject.name);
 			Debug.Log (gameObject.name);
 
-		} else if (GameManager.instance.plantSelected == true && currentSelected == true)
+		} else if (canCurrentPlantBeSelected())
 		{
-			soundEffectsManager._instance.playButtonClick2 ();
+			SoundEffectsManager._instance.playButtonClick2 ();
 			Debug.Log (gameObject.name);
 			GameManager.instance.plantSelected = false;
 			currentSelected = false;
 			GameManager.instance.setPlantType (null);
 		}
+	}
+
+	public bool canCurrentPlantBeSelected()
+	{
+		return GameManager.instance.plantSelected && currentSelected;
+	}
+
+	public bool AreOtherConditionsMet()
+	{
+		return GameManager.instance.tileSelected && GameManager.instance.getResult () > 0;
 	}
 
 	void Update () {

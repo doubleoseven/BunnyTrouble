@@ -30,7 +30,7 @@ public class enemyMovement : MonoBehaviour
 //		}
 
 
-		if (GetComponent<bunnyHealth> ().dead != true) 
+		if (GetComponent<bunnyHealth> ().Dead != true) 
 		{
 			transform.Translate (-Vector2.right * speed * (Time.deltaTime));
 		}

@@ -1,44 +1,50 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof(Element))]
 public class selectTile : MonoBehaviour {
+
+	// Checks to see if the current tile is selected
 	public bool currentSelected;
 
+	// Checks if a plant has been planted on the current tile
 	public bool vegtablePlanted;
 
+	// A refrence to the Element class
 	Element element;
-
-
-	//private string tileSelectedName;
-
-	// Use this for initialization
+	private Color selectedColor;
+	private Color unSelectdColor;
 	void Start () {
 		element = GetComponent<Element> () as Element;
+
+		// Initial state of the tile
 		currentSelected = false;
 		vegtablePlanted = false;
-	
+		selectedColor = new Color (1f, 1f, 1f, .5f);
+		unSelectdColor = new Color (1f, 1f, 1f, 1f);
 	}
 
 	private void OnMouseDown()
 	{
-		if (GameManager.instance.tileSelected == false && currentSelected == false && vegtablePlanted == false) {
+		// The tile can only be selected/deselected if no plant has been planted on it
+
+		if (tileCanBeSelected()) {
 			GameManager.instance.tileSelected = true;
 			currentSelected = true;
+			// Set the value of the tile selected
 			GameManager.instance.setTileSelectedValue(element.getValue());
-			//mouseOver = element.getSprite;
 			GameManager.instance.tileObject = gameObject;
-			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, .5f);
 		} 
-		else if(GameManager.instance.tileSelected == true&& currentSelected == true && vegtablePlanted == false)
+		else if(tileCanBeDeSelected())
 		{
 			GameManager.instance.tileSelected = false;
 			currentSelected = false;
 			GameManager.instance.setTileSelectedValue(0);
-			GetComponent<SpriteRenderer>().color = new Color (1f, 1f, 1f, 1f);
+			GameManager.instance.tileObject = null;
 		}
-		//element.loadTexture (mouseOver);
 	}
 
+	// Setters and getters
 	public bool getCurrentSelected(){
 		return currentSelected;
 	}
@@ -55,14 +61,24 @@ public class selectTile : MonoBehaviour {
 		vegtablePlanted = planted;
 	}
 
+	public bool tileCanBeSelected()
+	{
+		return GameManager.instance.tileSelected == false && currentSelected == false && vegtablePlanted == false;
+	}
 
-	
-	// Update is called once per frame
+	public bool tileCanBeDeSelected()
+	{
+		return GameManager.instance.tileSelected == true && currentSelected == true && vegtablePlanted == false;
+	}
+
+
 	void Update () {
-		if (GameManager.instance.tileSelected == true && currentSelected == true) {
-			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, .5f);
-		} else if (GameManager.instance.tileSelected == false && currentSelected == false && vegtablePlanted == false) {
-			GetComponent<SpriteRenderer>().color = new Color (1f, 1f, 1f, 1f);
+
+		if (tileCanBeDeSelected()) {
+			GetComponent<SpriteRenderer> ().color = selectedColor;
+
+		} else if (tileCanBeSelected()) {
+			GetComponent<SpriteRenderer>().color = unSelectdColor;
 		}
 
 		if (GameManager.instance.tileSelected == false) {

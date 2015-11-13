@@ -1,55 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bunnyHealth : MonoBehaviour
-{   
-	private SpriteRenderer spriteRenderer; 
-
+public class bunnyHealth : Health
+{  
 	public int startingHealth = 20;
-	public int currentHealth;
 
-	public bool dead;
-
+	//To animate when the bunny dies
 	Animator anim;
-   // public bool move= true;
-
-
+	
 	void Awake()
 	{
 		anim = GetComponent<Animator> ();
 		currentHealth = startingHealth;
 	}
 
-	public void doDamage(int damageValue)
+	public override void doDamage(int damageValue)
 	{
-		if (isDead)
+		if (Dead)
 			return;
 
-		currentHealth -= damageValue;
+		base.doDamage (damageValue);
 
 		if (currentHealth <= 0) 
 		{
-			Death();
+			death();
 		}
-
 	}
 
-	void Death()
+	public override void death()
 	{
-		dead = true;
+		base.death ();
 		GameManager.instance.bunniesSaved+=1;
 		anim.SetTrigger("transforming"); 
 		Destroy (gameObject, 2f);
 	}
-
-	public bool isDead
-	{
-		get{ return currentHealth <= 0;}
-	}
-
-
-
-
 
 }
 

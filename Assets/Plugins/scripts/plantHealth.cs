@@ -1,46 +1,54 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class plantHealth : MonoBehaviour {
-
+public class plantHealth : Health
+{
 	public int startingHealth = 10;
-	public int currentHealth;
-
-	selectTile tile;
 	public int scoreValue= 5; 
+	
+	private selectTile tile;
+	private bool damaged;
 
-	bool damaged;
+	private Rigidbody2D rigidbody;
+	private SpriteRenderer sprite;
 
-	///public BunnyEating plantCount;
-
-	public bool IsPlantEaten;
 
 	void Start()
 	{
 		tile = gameObject.transform.GetComponentInParent<selectTile> ();
+		rigidbody = GetComponent<Rigidbody2D> ();
+		sprite = gameObject.GetComponent<SpriteRenderer> ();
+		currentHealth = startingHealth;
 	}
 
 	void Update()
 	{
-		if (currentHealth <= 0 && !IsPlantEaten) 
+		if (Dead && !dead) 
 		{	
-			Death();
+			death();
 		} 
 	}
 
 
-	public void doDamage(int damageValue)
+	public override void doDamage(int damageValue)
 	{  
-		damaged = true;
-		currentHealth -= damageValue;
+		base.doDamage (damageValue);
 	}
 
-	void Death()
+	public override void death()
 	{
-		IsPlantEaten = true;
+		base.death ();
 		ScoreManager.score += scoreValue;
 		tile.setVegtablePlanted (false);
 
-		Destroy(gameObject);
+		Destroy (gameObject);
+	}
+
+	public void Destroy(GameObject gameObject)
+	{
+		Vector2 moveBy = new Vector2 (1, 1);
+		rigidbody.MovePosition (moveBy);
+		sprite.enabled = false;
+		Destroy(gameObject, 1);
 	}
 }

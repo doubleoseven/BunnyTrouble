@@ -7,7 +7,7 @@ public class winScript : MonoBehaviour {
 	public int bunniesToSave = 9;
 	public int bunniesLeft; 
 	Text text;  
-	// Use this for initialization
+
 	void Awake () {
 		text = GetComponent <Text> ();
 		bunniesLeft = 9;

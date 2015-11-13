@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class soundEffectsManager : MonoBehaviour {
+public class SoundEffectsManager : MonoBehaviour {
 
 	public AudioSource soundEffect;
 	public AudioClip correct;
 	public AudioClip wrong;
 	public AudioClip buttonClick;
 	public AudioClip buttonClick2;
-	public static soundEffectsManager _instance = null;
+
+	public static SoundEffectsManager _instance = null;
 	// Use this for initialization
 	void Start () {
 		soundEffect = GetComponent<AudioSource> ();
