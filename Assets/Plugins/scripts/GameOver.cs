@@ -2,11 +2,17 @@
 using System.Collections;
 
 public class GameOver : MonoBehaviour {
-	//public int count=0;
+
+	public int crossingLine = -2;
+
+	void Start()
+	{
+		//crossingLine = Screen.width / 2 - 5; 
+	}
 
 	public void Update(){
 
-		if (((int)gameObject.transform.position.x) == -2) {
+		if (((int)gameObject.transform.position.x) == crossingLine) {
 			
 			GameManager.instance.bunniesCrossedOver++;
 			Destroy(gameObject);

@@ -50,7 +50,7 @@ public class selectPlant : MonoBehaviour {
 			currentSelected = false; 
 			GameManager.instance.setPlantType (null);
 			GameManager.instance.plantSelected = false;
-		}
+		} // We only want to do this once whenever certain condiitons are done. like unselecting a tile
 
 	}
 

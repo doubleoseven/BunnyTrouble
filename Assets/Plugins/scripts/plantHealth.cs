@@ -9,7 +9,7 @@ public class plantHealth : Health
 	private selectTile tile;
 	private bool damaged;
 
-	private Rigidbody2D rigidbody;
+	private  Rigidbody2D rigidbody;
 	private SpriteRenderer sprite;
 
 
@@ -40,13 +40,13 @@ public class plantHealth : Health
 		base.death ();
 		ScoreManager.score += scoreValue;
 		tile.setVegtablePlanted (false);
-
 		Destroy (gameObject);
 	}
 
 	public void Destroy(GameObject gameObject)
 	{
-		Vector2 moveBy = new Vector2 (1, 1);
+		// This is so that OnCollisionExitIsCalled
+		Vector2 moveBy = new Vector2 (Random.Range(0, -Screen.width), Random.Range(0, -Screen.height));
 		rigidbody.MovePosition (moveBy);
 		sprite.enabled = false;
 		Destroy(gameObject, 1);

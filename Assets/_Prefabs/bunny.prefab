@@ -92,8 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 50
-  currentHealth: 20
-  dead: 0
 --- !u!114 &11407208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56c31cb7c0f54648997b214c402f181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crossingLine: -8
 --- !u!114 &11432066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c21b26b25e8b44e79f37ce4f0f44757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: .800000012
 --- !u!114 &11480358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,7 +129,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: .5
   attackDamage: 1
-  plantInRange: 0
 --- !u!212 &21280996
 SpriteRenderer:
   m_ObjectHideFlags: 1

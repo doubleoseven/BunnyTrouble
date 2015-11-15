@@ -10,7 +10,7 @@ using System.Collections;
 		arraysOfNumbersSeleted = GameManager.instance.getSelectedNumbers ();
 		//length = arraysOfNumbersSeleted.Length;
 	}
-	// Use this for initialization
+	// Use this for initialization 
 	public void SelectNumber()
 	{
 		if (gameObject.name == "numberOne" && GameManager.instance.tileSelected) {
@@ -56,15 +56,8 @@ using System.Collections;
 					GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
 				}
 		} 
-
-
-
-		//gameObject.name;
 	}
-
 	
-
-	// Update is called once per frame
 
 	void Update () {
 		GameManager.instance.setSelectedNumbers(arraysOfNumbersSeleted);

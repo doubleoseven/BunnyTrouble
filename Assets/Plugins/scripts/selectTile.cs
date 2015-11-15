@@ -12,14 +12,22 @@ public class selectTile : MonoBehaviour {
 
 	// A refrence to the Element class
 	Element element;
+
 	private Color selectedColor;
 	private Color unSelectdColor;
+
+	private SpriteRenderer spriteRenderer;
+
 	void Start () {
+
 		element = GetComponent<Element> () as Element;
+		spriteRenderer = GetComponent<SpriteRenderer> ();
 
 		// Initial state of the tile
 		currentSelected = false;
 		vegtablePlanted = false;
+
+		// Color values
 		selectedColor = new Color (1f, 1f, 1f, .5f);
 		unSelectdColor = new Color (1f, 1f, 1f, 1f);
 	}
@@ -70,20 +78,19 @@ public class selectTile : MonoBehaviour {
 	{
 		return GameManager.instance.tileSelected == true && currentSelected == true && vegtablePlanted == false;
 	}
-
+	
 
 	void Update () {
 
 		if (tileCanBeDeSelected()) {
-			GetComponent<SpriteRenderer> ().color = selectedColor;
+			spriteRenderer.color = selectedColor;
 
 		} else if (tileCanBeSelected()) {
-			GetComponent<SpriteRenderer>().color = unSelectdColor;
+			spriteRenderer.color = unSelectdColor;
 		}
 
 		if (GameManager.instance.tileSelected == false) {
 			currentSelected = false;
 		}
-	
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class plantDamage : MonoBehaviour {
+public class damageBunny : MonoBehaviour {
 
 	public int damage = 1;
 	public float timeBetweenDamage = 0.15f;
@@ -21,6 +21,7 @@ public class plantDamage : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "enemy") 
 		{
+			Debug.Log ("Colliding with bunny!");
 			bHealth = coll.gameObject.GetComponent<bunnyHealth>();
 			bunnyInRange = true;
 		}
@@ -30,6 +31,7 @@ public class plantDamage : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "enemy") 
 		{
+			Debug.Log ("Not Colliding with bunny!");
 			bunnyInRange = false;
 		}
 	}
@@ -38,18 +40,20 @@ public class plantDamage : MonoBehaviour {
 	void Update () {
 		timer += Time.deltaTime;
 
-		if (timer >= timeBetweenDamage && bunnyInRange && bHealth.currentHealth > 0) 
-		{
-			Attack();
+		if (timer >= timeBetweenDamage && bunnyInRange) {
+			if (!bHealth.Dead) {
+				Attack ();
+			} else
+				bunnyInRange = false;
 		}
 	}
 
 	void Attack()
 	{
 		timer = 0f;
-		if(bHealth.currentHealth > 0)
-		{
-			bHealth.doDamage(damage);
-		}
+		if (!bHealth.Dead) {
+			bHealth.doDamage (damage);
+		} else 
+			bunnyInRange = false;
 	}
 }
