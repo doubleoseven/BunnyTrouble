@@ -145,7 +145,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 808106504}
-        m_MethodName: LoadScene
+        m_MethodName: LoadScene2
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -457,9 +457,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 808106497}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d0e6660db72344aabd5f48447defb59, type: 3}
+  m_Script: {fileID: 11500000, guid: 040e2c643925e42b0aa0eeb9add3ca15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingImage: {fileID: 0}
 --- !u!1 &945025028
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +623,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1187007468}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f186d4fa551824ffead7363909ae04c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2769dd0376923446f87e4a5923055629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!81 &1187007470

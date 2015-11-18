@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11407874}
   - 114: {fileID: 11479428}
   - 114: {fileID: 11453284}
+  - 114: {fileID: 11485156}
   m_Layer: 0
   m_Name: GrassCenter
   m_TagString: tile
@@ -60,11 +61,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fbb429c10e35d4679afd22f7dfad9fb1, type: 3}
   - {fileID: 21300000, guid: 54543bc78932546fdb4df0978530e674, type: 3}
   - {fileID: 21300000, guid: 23fa9e087a88349f79d688330f04830a, type: 3}
-  plants:
-  - {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
-  - {fileID: 138464, guid: 2298fff7f31e54d0ca5731555a138565, type: 2}
-  - {fileID: 162644, guid: ea40ce33d0d494c5baeb346b25bfd3e4, type: 2}
-  - {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
 --- !u!114 &11453284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +85,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30c61f9190e24f628dc87f77604fb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11485156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de0bd704e4f847cfa5584db53ea2ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plants:
+  - {fileID: 192720, guid: 93cc5600140634c7ca2cb5af3926b95e, type: 2}
+  - {fileID: 138464, guid: 2298fff7f31e54d0ca5731555a138565, type: 2}
 --- !u!212 &21226460
 SpriteRenderer:
   m_ObjectHideFlags: 1

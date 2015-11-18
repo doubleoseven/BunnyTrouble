@@ -570,8 +570,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1899829364}
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 1899829363}
+        m_MethodName: LoadScene2
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -716,7 +716,6 @@ GameObject:
   - 222: {fileID: 1899829362}
   - 114: {fileID: 1899829361}
   - 114: {fileID: 1899829363}
-  - 114: {fileID: 1899829364}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -839,17 +838,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingImage: {fileID: 1127005984}
---- !u!114 &1899829364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1899829356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d0e6660db72344aabd5f48447defb59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1958653388
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +985,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1899829364}
+      - m_Target: {fileID: 1899829363}
         m_MethodName: quit
         m_Mode: 1
         m_Arguments:

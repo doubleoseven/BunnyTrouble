@@ -21,12 +21,12 @@ public class selectPlant : MonoBehaviour {
 			GameManager.instance.plantSelected = true;
 			currentSelected = true;
 			GameManager.instance.setPlantType (gameObject.name);
-			Debug.Log (gameObject.name);
+//			Debug.Log (gameObject.name);
 
 		} else if (canCurrentPlantBeSelected())
 		{
 			SoundEffectsManager._instance.playButtonClick2 ();
-			Debug.Log (gameObject.name);
+//			Debug.Log (gameObject.name);
 			GameManager.instance.plantSelected = false;
 			currentSelected = false;
 			GameManager.instance.setPlantType (null);

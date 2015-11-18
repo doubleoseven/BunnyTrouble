@@ -13,19 +13,23 @@ public class plantButton : MonoBehaviour {
 						//if(soundEffectsManager._instance!=null)
 						SoundEffectsManager._instance.playCorrect();
 						GameManager.instance.vegtablePlanted = "carrot";
+						GameManager.instance.isVegtablePlanted = true;
 					}
 					else if(GameManager.instance.getPlantType() == "turnip"){
 						//if(soundEffectsManager._instance!=null)
 						SoundEffectsManager._instance.playCorrect();
 						GameManager.instance.vegtablePlanted = "turnip";
+						GameManager.instance.isVegtablePlanted = true;
 					}
 					else if(GameManager.instance.getPlantType() == "pumpkin"){
 						SoundEffectsManager._instance.playCorrect();
 						GameManager.instance.vegtablePlanted = "pumpkin";
+						GameManager.instance.isVegtablePlanted = true;
 					}
 					else if(GameManager.instance.getPlantType() == "tomatoes"){
 						SoundEffectsManager._instance.playCorrect();
 						GameManager.instance.vegtablePlanted = "tomatoes";
+						GameManager.instance.isVegtablePlanted = true;
 					}
 				} else {
 					//if(soundEffectsManager._instance!=null)

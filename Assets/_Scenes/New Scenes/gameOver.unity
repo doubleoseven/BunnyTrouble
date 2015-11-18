@@ -194,9 +194,9 @@ GameObject:
   - 223: {fileID: 971243635}
   - 114: {fileID: 971243634}
   - 114: {fileID: 971243633}
-  - 114: {fileID: 971243629}
   - 222: {fileID: 971243632}
   - 114: {fileID: 971243631}
+  - 114: {fileID: 971243629}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -212,9 +212,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 971243628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d0e6660db72344aabd5f48447defb59, type: 3}
+  m_Script: {fileID: 11500000, guid: 040e2c643925e42b0aa0eeb9add3ca15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingImage: {fileID: 0}
 --- !u!224 &971243630
 RectTransform:
   m_ObjectHideFlags: 0
@@ -445,7 +446,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 971243629}
-        m_MethodName: LoadScene
+        m_MethodName: LoadScene2
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

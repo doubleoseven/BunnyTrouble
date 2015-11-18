@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+
 [RequireComponent (typeof(selectPlant))]
-public class buttonColor : MonoBehaviour {
+public class PlantButtonColor : MonoBehaviour {
 
 	private Button self;
 	private selectPlant plantSelect;
@@ -19,7 +20,7 @@ public class buttonColor : MonoBehaviour {
 	
 	public void changeColor()
 	{
-		if (plantSelect.IsCurrentSelected()) {
+		if (plantSelect.IsCurrentSelected() && GameManager.instance.plantSelected == true) {
 			self.image.color = alphaColor;
 		} else 
 			self.image.color = regularColor;

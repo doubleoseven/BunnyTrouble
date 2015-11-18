@@ -3,63 +3,58 @@ using System.Collections;
 
 	public class selectNumber : MonoBehaviour {
 	public int[] arraysOfNumbersSeleted; 
-	//int length;
-
-	//public bool numberSelected = false;
-	void Start () {
+	int length;
+	
+	void Start () 
+	{
 		arraysOfNumbersSeleted = GameManager.instance.getSelectedNumbers ();
-		//length = arraysOfNumbersSeleted.Length;
+		length = arraysOfNumbersSeleted.Length;
 	}
-	// Use this for initialization 
+
 	public void SelectNumber()
 	{
-		if (gameObject.name == "numberOne" && GameManager.instance.tileSelected) {
-			if (arraysOfNumbersSeleted.Length <5 && GameManager.instance.getCounter()<4) {
+		if (TileSelected ()) 
+		{
+			if(NumbersCanBeSelected())
+			{
 				SoundEffectsManager._instance.playButtonClick();
-				Debug.Log (gameObject.name);
-				arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 1;
-				GameManager.instance.addResult(1);
-				if(GameManager.instance.getCounter()<4)
-					GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
-			}
-		} 
 
-		else if (gameObject.name == "numberTwo" && GameManager.instance.tileSelected) {
-			if (arraysOfNumbersSeleted.Length< 5 && GameManager.instance.getCounter()<4) {
-				//soundEffectsManager._instance.playButtonClick();
-				Debug.Log (gameObject.name);
-				arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 2;
-				GameManager.instance.addResult(2);
-				if(GameManager.instance.getCounter()<4)
-					GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
-			}
-		} 
-
-		else if (gameObject.name == "numberThree" && GameManager.instance.tileSelected) {
-			if(arraysOfNumbersSeleted.Length<5 && GameManager.instance.getCounter()<4){
-				//soundEffectsManager._instance.playButtonClick();
-				Debug.Log (gameObject.name);
-				arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 3;
-				GameManager.instance.addResult(3);
-				if(GameManager.instance.getCounter()<4)
-					GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
+				
+				switch(gameObject.name)
+				{
+				case "numberOne":
+//					Debug.Log (gameObject.name);
+					arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 1;
+					GameManager.instance.addResult(1);
+					break;
+				case "numberTwo":
+//					Debug.Log (gameObject.name);
+					arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 2;
+					GameManager.instance.addResult(2);
+					break;
+				case "numberThree":
+//					Debug.Log (gameObject.name);
+					arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 3;
+					GameManager.instance.addResult(3);
+					break;
+				case "numberFour":
+//					Debug.Log (gameObject.name);
+					arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 4;
+					GameManager.instance.addResult(4);;
+					break;
+				 default:
+					Debug.Log ("No such number exists");
+					break;
 				}
-		} 
+				 
 
-		else if (gameObject.name == "numberFour" && GameManager.instance.tileSelected) {
-			if(arraysOfNumbersSeleted.Length<5 && GameManager.instance.getCounter()<4){
-				SoundEffectsManager._instance.playButtonClick();
-				Debug.Log (gameObject.name);
-				arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 4;
-				GameManager.instance.addResult(4);
-				if(GameManager.instance.getCounter()<4)
-					GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
-				}
-		} 
+				GameManager.instance.setCounter(GameManager.instance.getCounter() +1);
+			}
+		}
 	}
 	
-
-	void Update () {
+	void Update () 
+	{
 		GameManager.instance.setSelectedNumbers(arraysOfNumbersSeleted);
 
 		if (GameManager.instance.tileSelected != true) {
@@ -67,15 +62,25 @@ using System.Collections;
 			GameManager.instance.setCounter(0);
 			GameManager.instance.setResult(0);
 		}
-
 	}
 
-	private void Clear(int[] array){
-		for (int i = 0; i<array.Length; i++) {
+	private void Clear(int[] array)
+	{
+		for (int i = 0; i<array.Length; i++) 
+		{
 			array[i] = 0;
 		}
 	}
 
+	private bool TileSelected()
+	{
+		return GameManager.instance.tileSelected;
+	}
+	
+	private bool NumbersCanBeSelected()
+	{
+		return length < 5 && GameManager.instance.getCounter () < 4;
+	}
 
 	
 }

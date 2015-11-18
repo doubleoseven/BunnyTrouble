@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof(Element))]
+[RequireComponent (typeof(NumberTexture))]
 public class selectTile : MonoBehaviour {
 
 	// Checks to see if the current tile is selected
@@ -11,7 +11,7 @@ public class selectTile : MonoBehaviour {
 	public bool vegtablePlanted;
 
 	// A refrence to the Element class
-	Element element;
+	NumberTexture numberTextureScript;
 
 	private Color selectedColor;
 	private Color unSelectdColor;
@@ -20,7 +20,7 @@ public class selectTile : MonoBehaviour {
 
 	void Start () {
 
-		element = GetComponent<Element> () as Element;
+		numberTextureScript = GetComponent<NumberTexture> () as NumberTexture;
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 
 		// Initial state of the tile
@@ -34,13 +34,11 @@ public class selectTile : MonoBehaviour {
 
 	private void OnMouseDown()
 	{
-		// The tile can only be selected/deselected if no plant has been planted on it
-
 		if (tileCanBeSelected()) {
 			GameManager.instance.tileSelected = true;
 			currentSelected = true;
 			// Set the value of the tile selected
-			GameManager.instance.setTileSelectedValue(element.getValue());
+			GameManager.instance.setTileSelectedValue(numberTextureScript.getValue());
 			GameManager.instance.tileObject = gameObject;
 		} 
 		else if(tileCanBeDeSelected())
@@ -71,6 +69,7 @@ public class selectTile : MonoBehaviour {
 
 	public bool tileCanBeSelected()
 	{
+		// The tile can only be selected/deselected if no plant has been planted on it
 		return GameManager.instance.tileSelected == false && currentSelected == false && vegtablePlanted == false;
 	}
 

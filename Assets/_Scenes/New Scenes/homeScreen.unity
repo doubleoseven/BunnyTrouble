@@ -406,7 +406,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1288146071}
+      - m_Target: {fileID: 1288146070}
         m_MethodName: quit
         m_Mode: 1
         m_Arguments:
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1114766892}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff056ea2dac494c0489d1c3da26a35ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 2769dd0376923446f87e4a5923055629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!81 &1114766894
@@ -557,7 +557,6 @@ GameObject:
   - 222: {fileID: 1288146065}
   - 114: {fileID: 1288146064}
   - 114: {fileID: 1288146070}
-  - 114: {fileID: 1288146071}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -681,17 +680,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingImage: {fileID: 186448446}
---- !u!114 &1288146071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1288146063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d0e6660db72344aabd5f48447defb59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1319804877
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,8 +780,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1288146071}
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 1288146070}
+        m_MethodName: LoadScene2
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1004,8 +992,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1288146071}
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 1288146070}
+        m_MethodName: LoadScene2
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
