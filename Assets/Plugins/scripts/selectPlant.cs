@@ -7,6 +7,7 @@ public class selectPlant : MonoBehaviour {
 	private bool currentSelected;
 	private bool canBeSelected = true;
 	private Image image;
+	private Plant plantScript;
 
 	Color regularColor;
 	Color alphaColor;
@@ -16,55 +17,51 @@ public class selectPlant : MonoBehaviour {
 		regularColor = new Color (1f, 1f, 1f, 1f);
 		alphaColor = new Color (1f, 1f, 1f, .5f);
 		image = GetComponent<Image> ();
+		plantScript = GetComponent<Plant> ();
 	}
 	
 	public void plantSelect(){
 
-		if (canCurrentPlantBeSelected() && AreOtherConditionsMet()) 
-		{
-			SoundEffectsManager._instance.playButtonClick2 ();
-			GameManager.instance.plantSelected = true;
-			currentSelected = true;
-			GameManager.instance.setPlantType (gameObject.name);
-			image.color = alphaColor;
-//			Debug.Log (gameObject.name);
+		if (canBeSelected) {
+			if (AreOtherConditionsMet ()) {
+				GameManager.instance.plantSelected = true;
+				currentSelected = true;
+				//GameManager.instance.setPlantType (gameObject.name);
 
-		} else if (canCurrentPlantBeDeSelected())
+				Plant ();
+				UnselectPlant ();
+			} 
+		}
+	}
+	
+
+	void Plant()
+	{
+		if (GameManager.instance.correct) 
 		{
-			SoundEffectsManager._instance.playButtonClick2 ();
-//			Debug.Log (gameObject.name);
-			GameManager.instance.plantSelected = false;
-			currentSelected = false;
-			GameManager.instance.setPlantType (null);
-			image.color = regularColor;
+			SoundEffectsManager._instance.playCorrect ();
+			GameManager.instance.vegtablePlanted = gameObject.name;
+			GameManager.instance.isVegtablePlanted = true;
+			plantScript.callCountDown ();
+		} else {
+			SoundEffectsManager._instance.playWrong ();
+			Debug.Log ("Result not correct");
+			GameManager.instance.tileSelected = false;
 		}
 	}
 
-	public bool canCurrentPlantBeSelected()
+	void UnselectPlant()
 	{
-		return GameManager.instance.plantSelected == false && currentSelected == false && canBeSelected == true;
+		GameManager.instance.plantSelected = false;
+		currentSelected = false;
 	}
-
-	public bool canCurrentPlantBeDeSelected()
-	{
-		return GameManager.instance.plantSelected == true && currentSelected == true && canBeSelected == true;
-	}
+	
 
 	public bool AreOtherConditionsMet()
 	{
 		return GameManager.instance.tileSelected && GameManager.instance.getResult () > 0;
 	}
-
-	void Update () {
-
-		if (GameManager.instance.tileSelected == false) {
-			image.color = regularColor;
-			currentSelected = false; 
-			GameManager.instance.setPlantType (null);
-			GameManager.instance.plantSelected = false;
-		} // We only want to do this once whenever certain condiitons are done. like unselecting a tile
-
-	}
+	
 
 	public bool IsCurrentSelected()
 	{

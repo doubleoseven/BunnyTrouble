@@ -11,7 +11,7 @@ using System.Collections;
 	public GameObject tileObject;
 	private BoardManager boardScript;
 
-	private string plantType; //Keeps track of the plant selected
+	//private string plantType; //Keeps track of the plant selected
 	private int tileSelectedValue;//Keeps track of the value of the tile selected
 	private int[] numbersSelected; //Array of numbers selected
 
@@ -98,14 +98,14 @@ using System.Collections;
 		return result;
 	}
 
-	public string getPlantType()
-	{
-		return plantType;
-	}
-	public void setPlantType(string type)
-	{
-		plantType = type;
-	}
+//	public string getPlantType()
+//	{
+//		return plantType;
+//	}
+//	public void setPlantType(string type)
+//	{
+//		plantType = type;
+//	}
 
 	public void setTileSelectedValue(int value)
 	{

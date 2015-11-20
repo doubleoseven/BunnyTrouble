@@ -11,7 +11,6 @@ GameObject:
   - 212: {fileID: 21226460}
   - 61: {fileID: 6193236}
   - 114: {fileID: 11407874}
-  - 114: {fileID: 11479428}
   - 114: {fileID: 11453284}
   - 114: {fileID: 11485156}
   m_Layer: 0
@@ -74,17 +73,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSelected: 0
   vegtablePlanted: 0
---- !u!114 &11479428
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30c61f9190e24f628dc87f77604fb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11485156
 MonoBehaviour:
   m_ObjectHideFlags: 1
