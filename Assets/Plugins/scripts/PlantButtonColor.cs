@@ -20,7 +20,7 @@ public class PlantButtonColor : MonoBehaviour {
 	
 	public void changeColor()
 	{
-		if (plantSelect.IsCurrentSelected() && GameManager.instance.plantSelected == true) {
+		if (plantSelect.IsCurrentSelected()) {
 			self.image.color = alphaColor;
 		} else 
 			self.image.color = regularColor;

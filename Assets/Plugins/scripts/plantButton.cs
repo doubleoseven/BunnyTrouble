@@ -3,6 +3,8 @@ using System.Collections;
 
 public class plantButton : MonoBehaviour {
 
+	public Plant carrotScript;
+	public Plant turnipScript;
 
 	public void plant(){
 
@@ -14,12 +16,14 @@ public class plantButton : MonoBehaviour {
 						SoundEffectsManager._instance.playCorrect();
 						GameManager.instance.vegtablePlanted = "carrot";
 						GameManager.instance.isVegtablePlanted = true;
+						carrotScript.callCountDown();
 					}
 					else if(GameManager.instance.getPlantType() == "turnip"){
 						//if(soundEffectsManager._instance!=null)
 						SoundEffectsManager._instance.playCorrect();
 						GameManager.instance.vegtablePlanted = "turnip";
 						GameManager.instance.isVegtablePlanted = true;
+						turnipScript.callCountDown();
 					}
 					else if(GameManager.instance.getPlantType() == "pumpkin"){
 						SoundEffectsManager._instance.playCorrect();

@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddcbb66ffc5544ffa5411e896ea6313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
   timeBetweenDamage: .150000006
   bunnyInRange: 0
 --- !u!114 &11472448
@@ -86,9 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 10
-  currentHealth: 10
   scoreValue: 5
-  IsPlantEaten: 0
 --- !u!212 &21210426
 SpriteRenderer:
   m_ObjectHideFlags: 1

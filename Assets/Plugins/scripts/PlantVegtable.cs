@@ -7,6 +7,8 @@ public class PlantVegtable : MonoBehaviour {
 	// The plants that will be used in the level
 	public GameObject[] plants;
 
+	//public GameObjects[] plantButtons;
+
 	private SpriteRenderer spriteRenderer;
 	selectTile selectTileScript; 
 
