@@ -4,10 +4,12 @@ using System.Collections;
 public class SoundEffectsManager : MonoBehaviour {
 
 	public AudioSource soundEffect;
+
 	public AudioClip correct;
 	public AudioClip wrong;
 	public AudioClip buttonClick;
 	public AudioClip buttonClick2;
+	public AudioClip win;
 
 	public static SoundEffectsManager _instance = null;
 	// Use this for initialization
@@ -48,5 +50,10 @@ public class SoundEffectsManager : MonoBehaviour {
 	{
 		soundEffect.PlayOneShot (buttonClick2);
 	}
-	
+
+	public void playFireWorks()
+	{
+		soundEffect.PlayOneShot (win);
+	}
+
 }

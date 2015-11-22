@@ -21,10 +21,11 @@ public class EnemyManager : MonoBehaviour
 	}
     void Spawn ()
     {
-       // if(playerHealth.currentHealth <= 0f)
-       // {
-         //   return;
-       // }
+        if(GameManager.instance.paused)
+        {
+            return;
+        }
+
 		if (GameManager.instance.notConnected == false)
 			{
 			if (GameManager.instance.bunniesSaved >= 0 && GameManager.instance.bunniesSaved<5) {

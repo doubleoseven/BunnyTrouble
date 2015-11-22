@@ -32,7 +32,10 @@ public class enemyMovement : MonoBehaviour
 
 		if (GetComponent<bunnyHealth> ().Dead != true) 
 		{
-			transform.Translate (-Vector2.right * speed * (Time.deltaTime));
+			if(GameManager.instance.paused == false)
+			{
+				transform.Translate (-Vector2.right * speed * (Time.deltaTime));
+			}
 		}
 
 	}

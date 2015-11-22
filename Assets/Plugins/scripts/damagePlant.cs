@@ -8,6 +8,7 @@ public class damagePlant : MonoBehaviour {
 	public int attackDamage = 1;
 
 	Animator anim;
+	AudioSource audio;
 
 	//Refrences to the plant and bunny health scripts
 	plantHealth pHealth;
@@ -20,7 +21,7 @@ public class damagePlant : MonoBehaviour {
 
 	void Start()
 	{
-
+		audio = GetComponent<AudioSource> ();
 		anim = GetComponent<Animator> ();
 		bHealth = GetComponent<bunnyHealth> ();
 	}
@@ -33,6 +34,7 @@ public class damagePlant : MonoBehaviour {
 			pHealth = coll.gameObject.GetComponent<plantHealth>();
 			plantInRange = true;
 			anim.SetTrigger("eating");
+			audio.Play();
 		}
 	}
 
@@ -43,6 +45,7 @@ public class damagePlant : MonoBehaviour {
 			Debug.Log ("Not Colliding with plant!");
 			plantInRange = false;
 			anim.SetTrigger("moving");
+			audio.Stop();
 		}
 	}
 

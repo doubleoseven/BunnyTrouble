@@ -7,6 +7,7 @@ using System.Collections;
 
 	public bool tileSelected;
 	public bool plantSelected;
+	public bool paused = false;
 
 	public GameObject tileObject;
 	private BoardManager boardScript;
@@ -29,7 +30,7 @@ using System.Collections;
 
 	public GameObject screenOverlay;
 
-	
+
 	private int level = 1;
 	
 
@@ -146,6 +147,7 @@ using System.Collections;
 //		screenOverlay.SetActive (true);
 //		notConnected = true;
 //	}
+	
 
 		
 	}
