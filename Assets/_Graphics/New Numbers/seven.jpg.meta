@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: bae21c3efe4ad4202aa35045f32a301c
-timeCreated: 1448142249
+guid: ca3cc127e92634316919c58c13289a28
+timeCreated: 1448348659
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: MusicPlay
-    21300002: MusicMute
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -39,38 +37,18 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 700
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: MusicPlay
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 109
-        width: 2067
-        height: 2153
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MusicMute
-      rect:
-        serializedVersion: 2
-        x: 2272
-        y: 51
-        width: 2067
-        height: 2163
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 3}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

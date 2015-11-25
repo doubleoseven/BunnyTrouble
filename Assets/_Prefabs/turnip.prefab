@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  timeBetweenDamage: .150000006
+  timeBetweenDamage: .100000001
   bunnyInRange: 0
 --- !u!114 &11472448
 MonoBehaviour:

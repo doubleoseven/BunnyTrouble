@@ -22,7 +22,7 @@ public class winScript : MonoBehaviour {
 		text.text = " " + bunniesLeft;
 
 		if (bunniesLeft <= 0) {
-
+			GameManager.instance.bunniesSaved = 0;
 			SoundEffectsManager._instance.playFireWorks();
 			LoadLevel();
 		}
@@ -32,7 +32,7 @@ public class winScript : MonoBehaviour {
 
 	void LoadLevel()
 	{
-		Application.LoadLevel (6);
+		Application.LoadLevel (5);
 	}
 
 //	void OnLevelWasLoaded(int level)

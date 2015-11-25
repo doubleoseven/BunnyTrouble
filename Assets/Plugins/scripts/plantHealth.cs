@@ -23,7 +23,7 @@ public class plantHealth : Health
 
 	void Update()
 	{
-		if (Dead && !dead) 
+		if (Dead) 
 		{	
 			death();
 		} 

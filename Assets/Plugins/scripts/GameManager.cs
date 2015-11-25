@@ -6,7 +6,7 @@ using System.Collections;
 	public static GameManager instance = null;
 
 	public bool tileSelected;
-	public bool plantSelected;
+	public bool plantSelected; 
 	public bool paused = false;
 
 	public GameObject tileObject;
@@ -22,13 +22,16 @@ using System.Collections;
 	public string vegtablePlanted;
 	public bool isVegtablePlanted;
 
+	// Keep track of how many bunnies left
 	public int bunniesSaved;
 	public int bunniesCrossedOver;
-	
 
-	public bool notConnected;
+	public int maxBunnies = 5;
+	public int bunniesInTotal;
 
-	public GameObject screenOverlay;
+//	public bool notConnected;
+//
+//	public GameObject screenOverlay;
 
 
 	private int level = 1;
@@ -58,11 +61,13 @@ using System.Collections;
 			instance = this;
 		} else if (instance != this)
 			Destroy (gameObject);
-			
-		boardScript = GetComponent<BoardManager>();
 
-		InitGame();
+		DontDestroyOnLoad (gameObject);
+//		boardScript = GetComponent<BoardManager>();
+//
+//		InitGame();
 	}
+
 
 	//Getters and Setters!
 	public int[] getSelectedNumbers()
@@ -98,16 +103,7 @@ using System.Collections;
 	{
 		return result;
 	}
-
-//	public string getPlantType()
-//	{
-//		return plantType;
-//	}
-//	public void setPlantType(string type)
-//	{
-//		plantType = type;
-//	}
-
+	
 	public void setTileSelectedValue(int value)
 	{
 		tileSelectedValue = value;
@@ -129,15 +125,36 @@ using System.Collections;
 	}
 
 	void Update () {
-		if (bunniesCrossedOver == 5) {
+		if (bunniesCrossedOver > maxBunnies) {
 			GameOver();
 		}
+		LoadNextLevel ();
 	}
 	
 	void GameOver(){
 		Application.LoadLevel ("gameOver");
 	}
-	
+
+	void LoadNextLevel()
+	{
+		if (bunniesSaved >= (bunniesInTotal - maxBunnies)) 
+		{
+			SoundEffectsManager._instance.playFireWorks();
+			tileSelected = false;
+			bunniesSaved = 0;
+			bunniesCrossedOver = 0;
+			Application.LoadLevel(Application.loadedLevel + 1);
+
+		}
+
+	}
+
+	public int Level
+	{
+		get{return level;}
+		set{ level = value;}
+	}
+
 //	void HideNotConnectedScreen(){
 //		screenOverlay.SetActive (false);
 //		notConnected = false;

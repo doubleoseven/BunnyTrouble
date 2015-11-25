@@ -39,10 +39,10 @@ public class PlantVegtable : MonoBehaviour {
 				case "turnip":
 					plantVegtable(1);
 					break;
-				case "tomatoes":
+				case "pumpkin":
 					plantVegtable(2);
 					break;
-				case "pumpkin":
+				case "tomatoes":
 					plantVegtable(3);
 					break;
 				default:
