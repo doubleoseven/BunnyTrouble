@@ -277,7 +277,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c2f72bd9ea0b441008e79d6ccf6f81d8, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -428,12 +428,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9c48bf443a2434cbb6acd30666d53e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 613694603}
   correct: {fileID: 8300000, guid: 70445814e5cde4d2386d707bdbdee5da, type: 3}
   wrong: {fileID: 8300000, guid: daeaecaa838904be5b36563a8c386b62, type: 3}
   buttonClick: {fileID: 8300000, guid: 3a3040a5678f14ecfbc8fe3cdee84acf, type: 3}
   buttonClick2: {fileID: 8300000, guid: 19487f7ebba714b99bf33199384cc90b, type: 3}
   win: {fileID: 8300000, guid: d1ef7bdc941db4cbc8e7c4e3a02f720b, type: 3}
+  lose: {fileID: 8300000, guid: 5e29dce1a1a73438fa61fd59b83db1a5, type: 3}
+  waves:
+  - {fileID: 8300000, guid: a5707ede496354878a6faa9f824cb393, type: 3}
+  - {fileID: 8300000, guid: 5db72b03198ae4967a1546d05940b29d, type: 3}
 --- !u!1 &1127005984
 GameObject:
   m_ObjectHideFlags: 0

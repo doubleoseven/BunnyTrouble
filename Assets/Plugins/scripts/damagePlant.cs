@@ -57,6 +57,11 @@ public class damagePlant : MonoBehaviour {
 			if (!pHealth.Dead && !bHealth.Dead) { //Bunny can't attack if it's health is 0.
 				Attack ();
 			}
+			else
+			{
+				PlantInRange = false;
+				audio.Stop ();
+			}
 		}
 	}
 
@@ -71,13 +76,14 @@ public class damagePlant : MonoBehaviour {
 		} else {
 			//anim.SetTrigger ("moving");
 			PlantInRange = false;
+			audio.Stop ();
 		}
 	}
 
 	public bool PlantInRange
 	{
 		get{return plantInRange;}
-		set{PlantInRange = value;}
+		set{plantInRange = value;}
 	}
 
 	public void DestroyObject ()

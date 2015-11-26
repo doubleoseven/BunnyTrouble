@@ -71,8 +71,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddcbb66ffc5544ffa5411e896ea6313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 6
-  timeBetweenDamage: .150000006
+  damage: 5
+  timeBetweenDamage: .109999999
   bunnyInRange: 0
 --- !u!114 &11489176
 MonoBehaviour:
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048ebe6f628854844bc367baa57c3e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 10
+  startingHealth: 20
   scoreValue: 5
 --- !u!212 &21229408
 SpriteRenderer:

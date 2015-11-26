@@ -29,6 +29,9 @@ using System.Collections;
 	public int maxBunnies = 5;
 	public int bunniesInTotal;
 
+	private bool win = false;
+	private bool lost = false;
+
 //	public bool notConnected;
 //
 //	public GameObject screenOverlay;
@@ -124,29 +127,37 @@ using System.Collections;
 		boardScript.SetupScene (level);
 	}
 
-	void Update () {
-		if (bunniesCrossedOver > maxBunnies) {
+	void Update () 
+	{
+		if (bunniesCrossedOver > maxBunnies) 
+		{
 			GameOver();
 		}
-		LoadNextLevel ();
+		if (bunniesSaved >= (bunniesInTotal - maxBunnies)) 
+		{
+			LoadNextLevel ();
+		}
+
 	}
 	
 	void GameOver(){
+		SoundEffectsManager._instance.playGameOver ();
+		ResetValues ();
 		Application.LoadLevel ("gameOver");
 	}
 
 	void LoadNextLevel()
 	{
-		if (bunniesSaved >= (bunniesInTotal - maxBunnies)) 
-		{
-			SoundEffectsManager._instance.playFireWorks();
-			tileSelected = false;
-			bunniesSaved = 0;
-			bunniesCrossedOver = 0;
-			Application.LoadLevel(Application.loadedLevel + 1);
+		SoundEffectsManager._instance.playFireWorks();
+		ResetValues();
+		Application.LoadLevel(Application.loadedLevel + 1);
+	}
 
-		}
-
+	public void ResetValues()
+	{
+		bunniesCrossedOver = 0;
+		bunniesSaved = 0;
+		tileSelected = false;
 	}
 
 	public int Level

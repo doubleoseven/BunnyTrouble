@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class EnemyManager : MonoBehaviour
 {
 
+	public static EnemyManager _instance = null;
+
 	// Usued to decide which enemy prefab to instantiate
 	public enum EnemyLevels
 	{
@@ -39,9 +41,9 @@ public class EnemyManager : MonoBehaviour
 	public bool spawn = false;
 
 	//public float orignalSpawnTime = 15f;
-	[Range (5, 14)]
+	[Range (3, 10)]
 	public float minSpawnTime = 5;
-	[Range (15, 26)]
+	[Range (11, 20)]
 	public float maxSpawnTime = 20;
 
 	public float spawnTimer;
@@ -55,6 +57,9 @@ public class EnemyManager : MonoBehaviour
 	public int totalWaves = 5;
 	private int currentWaves = 0;
 
+	AudioSource audio;
+	public AudioClip[] waves;
+
 	public GameObject WaveText;
 
     public Transform[] spawnPoints;
@@ -62,6 +67,13 @@ public class EnemyManager : MonoBehaviour
 
     void Start ()
     {
+		//if we don't have an [_instance] set yet
+		if(!_instance)
+			_instance = this ;
+		//otherwise, if we do, kill this thing
+		else
+			Destroy(this.gameObject) ;
+
 		WaveText = GameObject.FindGameObjectWithTag ("WaveManager");
 		spawnTimer = Random.Range (minSpawnTime, maxSpawnTime);
 		Enemies.Add (EnemyLevels.Easy, EasyEnemy);
@@ -114,13 +126,14 @@ public class EnemyManager : MonoBehaviour
 				{
 					if(spawnedEnemy % totalEnemy == 0)
 					{
+						StartCoroutine(Wait (timeToWaitBeforeEachWave));
 						waveSpawn = true;
 						timeTillWave = 0.0f;
 						currentWaves++;
 						currentEnemy = 0;
 						if(currentWaves!=totalWaves)
 						{
-							StartCoroutine(ShowWaveScreen());
+							ShowWaveScreen();
 						}
 					}
 				}
@@ -139,16 +152,26 @@ public class EnemyManager : MonoBehaviour
 
 	public void InvokeShowWaveScreen()
 	{
-		StartCoroutine(ShowWaveScreen());
+		StartCoroutine (Wait (0));
+		ShowWaveScreen ();
 	}
 
-	IEnumerator ShowWaveScreen()
+	IEnumerator Wait(float time)
 	{
 		spawn = false;
+		yield return new WaitForSeconds (time);
+		spawn = true;
+	}
+
+	public void ShowWaveScreen()
+	{
 		WaveText.BroadcastMessage ("ChangeWaveNumber", currentWaves+1);
 		WaveText.BroadcastMessage ("FlyInAnimation");
-		yield return new WaitForSeconds (timeToWaitBeforeEachWave);
-		spawn = true;
+
+//		if (currentWaves + 1 == totalWaves) 
+//		{
+//
+//		}
 	}
 
 	void SetTotalBunnies()
@@ -160,6 +183,11 @@ public class EnemyManager : MonoBehaviour
 	{
 		get{return currentEnemy;}
 		set{currentEnemy -= value;} //subtract the value from current Enemy
+	}
+
+	public int CurrentWaves
+	{
+		get{return currentWaves;}
 	}
 
 	public void killEnemy()

@@ -10,6 +10,8 @@ public class SoundEffectsManager : MonoBehaviour {
 	public AudioClip buttonClick;
 	public AudioClip buttonClick2;
 	public AudioClip win;
+	public AudioClip lose;
+	public AudioClip[] waves;
 
 	public static SoundEffectsManager _instance = null;
 	// Use this for initialization
@@ -54,6 +56,30 @@ public class SoundEffectsManager : MonoBehaviour {
 	public void playFireWorks()
 	{
 		soundEffect.PlayOneShot (win);
+	}
+
+	public void playGameOver()
+	{
+		soundEffect.PlayOneShot (lose);
+	}
+
+	public void playWaveSound(int currentWave)
+	{
+		switch (currentWave) 
+		{
+			case 0:
+				soundEffect.PlayOneShot(waves[0]);
+				break;
+			case 1:
+				soundEffect.PlayOneShot(waves[1]);
+				break;
+			case 2:
+				soundEffect.PlayOneShot(waves[2]);
+				break;
+			default:
+				Debug.Log ("No such wave");
+				break;
+		}
 	}
 
 }
