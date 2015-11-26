@@ -57,9 +57,6 @@ public class EnemyManager : MonoBehaviour
 	public int totalWaves = 5;
 	private int currentWaves = 0;
 
-	AudioSource audio;
-	public AudioClip[] waves;
-
 	public GameObject WaveText;
 
     public Transform[] spawnPoints;
@@ -84,7 +81,8 @@ public class EnemyManager : MonoBehaviour
 
 		SetTotalBunnies ();
 
-		Invoke ("InvokeShowWaveScreen", timeToWait);
+		//Invoke ("InvokeShowWaveScreen", timeToWait);
+		StartCoroutine(Wait (timeToWait));
 
 	}
     void Spawn ()
@@ -126,14 +124,13 @@ public class EnemyManager : MonoBehaviour
 				{
 					if(spawnedEnemy % totalEnemy == 0)
 					{
-						StartCoroutine(Wait (timeToWaitBeforeEachWave));
 						waveSpawn = true;
 						timeTillWave = 0.0f;
 						currentWaves++;
 						currentEnemy = 0;
 						if(currentWaves!=totalWaves)
 						{
-							ShowWaveScreen();
+							StartCoroutine(Wait (timeToWaitBeforeEachWave));
 						}
 					}
 				}
@@ -153,7 +150,6 @@ public class EnemyManager : MonoBehaviour
 	public void InvokeShowWaveScreen()
 	{
 		StartCoroutine (Wait (0));
-		ShowWaveScreen ();
 	}
 
 	IEnumerator Wait(float time)
@@ -161,6 +157,7 @@ public class EnemyManager : MonoBehaviour
 		spawn = false;
 		yield return new WaitForSeconds (time);
 		spawn = true;
+		ShowWaveScreen();
 	}
 
 	public void ShowWaveScreen()
