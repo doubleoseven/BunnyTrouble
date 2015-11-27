@@ -4,6 +4,7 @@ using System.Collections;
 [RequireComponent (typeof(NumberTexture))]
 public class selectTile : MonoBehaviour {
 
+	private  Pause pauseScript;
 	// Checks to see if the current tile is selected
 	public bool currentSelected;
 
@@ -20,6 +21,8 @@ public class selectTile : MonoBehaviour {
 
 	void Start () {
 
+		pauseScript = GameObject.FindGameObjectWithTag ("UI").GetComponent<Pause> ();
+
 		numberTextureScript = GetComponent<NumberTexture> () as NumberTexture;
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 
@@ -34,19 +37,19 @@ public class selectTile : MonoBehaviour {
 
 	private void OnMouseDown()
 	{
-		if (tileCanBeSelected()) {
-			GameManager.instance.tileSelected = true;
-			currentSelected = true;
-			// Set the value of the tile selected
-			GameManager.instance.setTileSelectedValue(numberTextureScript.getValue());
-			GameManager.instance.tileObject = gameObject;
-		} 
-		else if(tileCanBeDeSelected())
-		{
-			GameManager.instance.tileSelected = false;
-			currentSelected = false;
-			GameManager.instance.setTileSelectedValue(0);
-			GameManager.instance.tileObject = null;
+		if (!pauseScript.Paused) {
+			if (tileCanBeSelected ()) {
+				GameManager.instance.tileSelected = true;
+				currentSelected = true;
+				// Set the value of the tile selected
+				GameManager.instance.setTileSelectedValue (numberTextureScript.getValue ());
+				GameManager.instance.tileObject = gameObject;
+			} else if (tileCanBeDeSelected ()) {
+				GameManager.instance.tileSelected = false;
+				currentSelected = false;
+				GameManager.instance.setTileSelectedValue (0);
+				GameManager.instance.tileObject = null;
+			}
 		}
 	}
 
@@ -80,7 +83,7 @@ public class selectTile : MonoBehaviour {
 	
 
 	void Update () {
-
+	
 		if (tileCanBeDeSelected()) {
 			spriteRenderer.color = selectedColor;
 

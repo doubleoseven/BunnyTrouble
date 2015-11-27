@@ -14,6 +14,7 @@ TagManager:
   - plantButton
   - EnemyManager
   - WaveManager
+  - UI
   layers:
   - Default
   - TransparentFX

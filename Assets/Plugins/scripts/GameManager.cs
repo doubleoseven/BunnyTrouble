@@ -27,10 +27,13 @@ using System.Collections;
 	public int bunniesCrossedOver;
 
 	public int maxBunnies = 5;
-	public int bunniesInTotal;
+	public int bunniesInTotal = 20;
 
 	private bool win = false;
 	private bool lost = false;
+
+	public AnimationClip bunnyTransformation;
+	public NewLevel newLevel;
 
 //	public bool notConnected;
 //
@@ -133,9 +136,10 @@ using System.Collections;
 		{
 			GameOver();
 		}
-		if (bunniesSaved >= (bunniesInTotal - maxBunnies)) 
+		if (bunniesSaved >= bunniesInTotal - maxBunnies) //if bunniesSaves >= bunniesInTotal - maxBunnies
 		{
-			LoadNextLevel ();
+			ResetValues();
+			Invoke("ShowLevelWinScreen", bunnyTransformation.length);
 		}
 
 	}
@@ -146,11 +150,10 @@ using System.Collections;
 		Application.LoadLevel ("gameOver");
 	}
 
-	void LoadNextLevel()
+	void ShowLevelWinScreen()
 	{
-		SoundEffectsManager._instance.playFireWorks();
-		ResetValues();
-		Application.LoadLevel(Application.loadedLevel + 1);
+		SoundEffectsManager._instance.playFireWorks ();
+		newLevel.ShowNewLevelScreen ();
 	}
 
 	public void ResetValues()
@@ -164,6 +167,18 @@ using System.Collections;
 	{
 		get{return level;}
 		set{ level = value;}
+	}
+
+	public void RestartLevel()
+	{
+		ResetValues ();
+		Application.LoadLevel (Application.loadedLevel);
+	}
+
+	public void LoadNextLevel()
+	{
+		win = false;
+		Application.LoadLevel(Application.loadedLevel + 1);
 	}
 
 //	void HideNotConnectedScreen(){

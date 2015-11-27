@@ -16,7 +16,6 @@ public class selectPlant : MonoBehaviour {
 		currentSelected = false;
 		regularColor = new Color (1f, 1f, 1f, 1f);
 		alphaColor = new Color (1f, 1f, 1f, .5f);
-		image = GetComponent<Image> ();
 		plantScript = GetComponent<Plant> ();
 	}
 	
