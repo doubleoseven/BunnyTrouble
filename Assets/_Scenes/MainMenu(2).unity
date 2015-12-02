@@ -412,10 +412,10 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: .470588237}
     m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
     m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
     m_ColorMultiplier: 1
@@ -565,10 +565,10 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: .470588237}
     m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
     m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
     m_ColorMultiplier: 1
@@ -1022,10 +1022,10 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: .470588237}
     m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
     m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
     m_ColorMultiplier: 1
@@ -2863,9 +2863,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1647784062}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: 0
+  m_MaxValue: 6
   m_WholeNumbers: 0
-  m_Value: -11
+  m_Value: -9.89999962
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3439,8 +3439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToStart: 4
   changeScenes: 1
-  changeMusicOnStart: 1
-  musicToChangeTo: 1
+  changeMusicOnStart: 0
+  musicToChangeTo: 0
   inMainMenu: 1
   animColorFade: {fileID: 9724420}
   animMenuAlpha: {fileID: 1993103761}
@@ -3477,8 +3477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicClips:
-  - {fileID: 8300000, guid: c2f72bd9ea0b441008e79d6ccf6f81d8, type: 3}
-  - {fileID: 8300000, guid: e783ac8c719184c9eb1a13f020500cc7, type: 3}
+  - {fileID: 8300000, guid: 7c36ac28ce2ea42a18be7591b3d36a6f, type: 3}
   volumeDown: {fileID: 24519918, guid: 0ac7fb39e445048d89688f69c2a1839a, type: 2}
   volumeUp: {fileID: 24500003, guid: 0ac7fb39e445048d89688f69c2a1839a, type: 2}
 --- !u!82 &1525852168
@@ -3492,7 +3491,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24324684, guid: 0ac7fb39e445048d89688f69c2a1839a,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: c2f72bd9ea0b441008e79d6ccf6f81d8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7c36ac28ce2ea42a18be7591b3d36a6f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4561,9 +4560,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1473658309}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: 20
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 20
+  m_Value: -12
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

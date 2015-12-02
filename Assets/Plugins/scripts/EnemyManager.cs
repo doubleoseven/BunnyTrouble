@@ -41,9 +41,9 @@ public class EnemyManager : MonoBehaviour
 	public bool spawn = false;
 
 	//public float orignalSpawnTime = 15f;
-	[Range (3, 10)]
+	[Range (2, 13)]
 	public float minSpawnTime = 5;
-	[Range (11, 20)]
+	[Range (14, 25)]
 	public float maxSpawnTime = 20;
 
 	public float spawnTimer;

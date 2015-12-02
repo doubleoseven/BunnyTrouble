@@ -3,11 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class winScript : MonoBehaviour {
-
-	public int bunniesToSave = 9;
-	public int bunniesLeft; 
-	public Animator anim;
-	public AnimationClip poof;
+	
+	private int bunniesLeft; 
 	Text text;  
 
 	void Awake () {
@@ -18,28 +15,9 @@ public class winScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Display the number of bunnies on screen.
-		bunniesLeft = bunniesToSave - GameManager.instance.bunniesSaved;
+		bunniesLeft = EnemyManager._instance.totalEnemy - GameManager.instance.bunniesSaved;
 		text.text = " " + bunniesLeft;
-
-		if (bunniesLeft <= 0) {
-			GameManager.instance.bunniesSaved = 0;
-			SoundEffectsManager._instance.playFireWorks();
-			LoadLevel();
-		}
-	
 	}
 
 
-	void LoadLevel()
-	{
-		Application.LoadLevel (5);
-	}
-
-//	void OnLevelWasLoaded(int level)
-//	{
-//		if (level == 6) 
-//		{
-//			SoundEffectsManager._instance.playFireWorks();
-//		}
-//	}
 }

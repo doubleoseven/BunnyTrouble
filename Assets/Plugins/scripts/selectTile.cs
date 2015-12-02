@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent (typeof(NumberTexture))]
 public class selectTile : MonoBehaviour {
 
-	private  Pause pauseScript;
+	private Pause pauseScript;
 	// Checks to see if the current tile is selected
 	public bool currentSelected;
 

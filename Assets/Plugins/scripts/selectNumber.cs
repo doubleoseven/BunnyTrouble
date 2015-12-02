@@ -42,6 +42,14 @@ using System.Collections;
 					arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 4;
 					GameManager.instance.addResult(4);;
 					break;
+				case "numberFive":
+					arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 5;
+					GameManager.instance.addResult(5);;
+					break;
+				case "numberSix":
+					arraysOfNumbersSeleted[GameManager.instance.getCounter()] = 6;
+					GameManager.instance.addResult(6);;
+					break;
 				 default:
 					Debug.Log ("No such number exists");
 					break;
