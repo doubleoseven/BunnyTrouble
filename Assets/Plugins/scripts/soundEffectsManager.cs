@@ -14,6 +14,7 @@ public class SoundEffectsManager : MonoBehaviour {
 	public AudioClip[] waves;
 
 	public static SoundEffectsManager _instance = null;
+
 	// Use this for initialization
 	void Start () {
 		soundEffect = GetComponent<AudioSource> ();
