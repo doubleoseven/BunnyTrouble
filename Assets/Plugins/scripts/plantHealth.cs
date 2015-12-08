@@ -10,6 +10,7 @@ public class plantHealth : Health
 	private bool damaged;
 
 	private  Rigidbody2D rigidbody;
+	private BoxCollider2D collider;
 	private SpriteRenderer sprite;
 
 
@@ -18,6 +19,7 @@ public class plantHealth : Health
 		tile = gameObject.transform.GetComponentInParent<selectTile> ();
 		rigidbody = GetComponent<Rigidbody2D> ();
 		sprite = gameObject.GetComponent<SpriteRenderer> ();
+		collider = GetComponent<BoxCollider2D> ();
 		currentHealth = startingHealth;
 	}
 
@@ -45,10 +47,11 @@ public class plantHealth : Health
 
 	public void Destroy(GameObject gameObject)
 	{
-		// This is so that OnCollisionExitIsCalled
-		Vector2 moveBy = new Vector2 (Random.Range(0, -Screen.width), Random.Range(0, -Screen.height));
-		rigidbody.MovePosition (moveBy);
+		// Allow the bunny to keep walking
+		collider.enabled = false;
+		// Hide the sprite 
 		sprite.enabled = false;
+
 		Destroy(gameObject, 1);
 	}
 }

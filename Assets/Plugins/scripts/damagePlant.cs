@@ -38,15 +38,23 @@ public class damagePlant : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionExit2D(Collision2D coll)
+//	void OnCollisionExit2D(Collision2D coll)
+//	{
+//		if (coll.gameObject.tag == "plant")
+//		{
+//			Debug.Log ("Not Colliding with plant!");
+//			plantInRange = false;
+//			anim.SetTrigger("moving");
+//			audio.Stop();
+//		}
+//	}
+
+	public void StopColliding()
 	{
-		if (coll.gameObject.tag == "plant")
-		{
-			Debug.Log ("Not Colliding with plant!");
-			plantInRange = false;
-			anim.SetTrigger("moving");
-			audio.Stop();
-		}
+		Debug.Log ("Not Colliding with plant!");
+		plantInRange = false;
+		anim.SetTrigger("moving");
+		audio.Stop();
 	}
 
 	void Update()
@@ -59,7 +67,8 @@ public class damagePlant : MonoBehaviour {
 			}
 			else
 			{
-				PlantInRange = false;
+				//PlantInRange = false;
+				StopColliding();
 				audio.Stop ();
 			}
 		}
@@ -73,6 +82,10 @@ public class damagePlant : MonoBehaviour {
 			pHealth.doDamage (attackDamage);
 			//anim.SetTrigger ("eating");
 			Debug.Log ("Damaged plant!");
+			if(pHealth.Dead)
+			{
+				StopColliding();
+			}
 		} else {
 			//anim.SetTrigger ("moving");
 			PlantInRange = false;

@@ -27,13 +27,19 @@ public class damageBunny : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionExit2D(Collision2D coll)
+//	void OnCollisionExit2D(Collision2D coll)
+//	{
+//		if (coll.gameObject.tag == "enemy") 
+//		{
+//			Debug.Log ("Not Colliding with bunny!");
+//			bunnyInRange = false;
+//		}
+//	}
+
+	public void StopColliding()
 	{
-		if (coll.gameObject.tag == "enemy") 
-		{
-			Debug.Log ("Not Colliding with bunny!");
-			bunnyInRange = false;
-		}
+		Debug.Log ("Not Colliding with bunny");
+		bunnyInRange = false;
 	}
 	
 	// Update is called once per frame
@@ -44,7 +50,10 @@ public class damageBunny : MonoBehaviour {
 			if (!bHealth.Dead) {
 				Attack ();
 			} else
-				bunnyInRange = false;
+			{
+				StopColliding();
+			}
+				
 		}
 	}
 
