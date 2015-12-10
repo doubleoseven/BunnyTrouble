@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreditsScene : MonoBehaviour {
-	
+public class LoadScene : MonoBehaviour {
+
+		
 	 public AnimationClip fadeColorAnimationClip;		//Animation clip fading to color (black default) when changing scenes
 	 public AnimationClip fadeAlphaAnimationClip;		//Animation clip fading out UI elements alpha
 	 public Animator animColorFade; 					//Reference to animator which will fade to and from black when starting game.
-
+	
 	private ShowPanels showPanels;	
 	private StartOptions startOptions;
 	// Use this for initialization
@@ -17,17 +18,19 @@ public class CreditsScene : MonoBehaviour {
 		startOptions = GetComponent<StartOptions> ();
 	}
 	
-	public void LoadCreditScene()
+	public void LoadSpecificScene(int level)
 	{
-		Invoke ("LoadDelayed", fadeColorAnimationClip.length * .5f);
+//		Invoke ("LoadDelayed", fadeColorAnimationClip.length * .5f);
+		StartCoroutine (LoadDelayed (level, fadeColorAnimationClip.length * .5f));
 
 		animColorFade.SetTrigger ("fade");
 		animColorFade.SetBool("faded", true);
 
 	}
 
-	public void LoadDelayed()
+	IEnumerator LoadDelayed(int level, float delayTime)
 	{
+		yield return new WaitForSeconds(delayTime);
 		//Pause button now works if escape is pressed since we are no longer in Main menu.
 		startOptions.inMainMenu = false;
 		
@@ -35,6 +38,6 @@ public class CreditsScene : MonoBehaviour {
 		showPanels.HideMenu ();
 		
 		//Load the selected scene, by scene index number in build settings
-		Application.LoadLevel ("credits");
+		Application.LoadLevel (level);
 	}
 }

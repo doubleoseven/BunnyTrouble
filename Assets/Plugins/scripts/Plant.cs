@@ -31,7 +31,7 @@ public class Plant : MonoBehaviour {
 		countDown.fillAmount = 1;
 		while (countDown.fillAmount > 0) 
 		{
-			countDown.fillAmount -= timeUntilAvail *Time.deltaTime;
+			countDown.fillAmount -= timeUntilAvail* Time.fixedDeltaTime;
 			yield return null;
 		}
 		countDown.fillAmount = 0;

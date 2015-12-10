@@ -154,7 +154,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -309,7 +309,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d41f67f7b814da58fad9ef6b59db23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeUntilAvail: .100000001
+  timeUntilAvail: .0900000036
 --- !u!114 &89891685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +562,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -708,7 +708,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -1032,7 +1032,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -1231,7 +1231,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -1313,7 +1313,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -2640,7 +2640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d41f67f7b814da58fad9ef6b59db23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeUntilAvail: .00999999978
+  timeUntilAvail: .0199999996
 --- !u!114 &907154130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2914,7 +2914,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -3180,8 +3180,8 @@ MonoBehaviour:
   timeToWaitBeforeEachWave: 15
   timeToWait: 15
   spawn: 1
-  minSpawnTime: 3
-  maxSpawnTime: 11
+  minSpawnTime: 1
+  maxSpawnTime: 14
   spawnTimer: 0
   waveTimer: 30
   totalWaves: 2
@@ -3344,7 +3344,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -3849,7 +3849,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -4000,7 +4000,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -4239,7 +4239,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -4321,7 +4321,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -4403,7 +4403,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -4696,7 +4696,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -4778,7 +4778,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -4927,7 +4927,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 
@@ -5388,7 +5388,7 @@ Prefab:
     - target: {fileID: 11485156, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: plants.Array.data[2]
       value: 
-      objectReference: {fileID: 198416, guid: 489cc2f6521ae4b4cb465b18214aafdb, type: 2}
+      objectReference: {fileID: 196466, guid: 785e9f760b5f74d29ba4480d5b7c945c, type: 2}
     - target: {fileID: 11407874, guid: abd1ff051083148e28ac3f66fc95fdd8, type: 2}
       propertyPath: numberTextures.Array.data[3]
       value: 

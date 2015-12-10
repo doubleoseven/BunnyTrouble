@@ -17,7 +17,7 @@ GameObject:
   - 50: {fileID: 5012154}
   - 114: {fileID: 11407208}
   - 82: {fileID: 8225746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bunny
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -240,6 +240,14 @@ Prefab:
       value: 
       objectReference: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 185522}

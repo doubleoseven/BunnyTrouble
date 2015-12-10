@@ -154,7 +154,7 @@ using System.Collections;
 	{
 		SoundEffectsManager._instance.playFireWorks ();
 		newLevel.ShowNewLevelScreen ();
-		ResetValues ();
+		//ResetValues ();
 	}
 
 	public void ResetValues()
@@ -179,6 +179,7 @@ using System.Collections;
 	public void LoadNextLevel()
 	{
 		win = false;
+		ResetValues ();
 		Application.LoadLevel(Application.loadedLevel + 1);
 	}
 

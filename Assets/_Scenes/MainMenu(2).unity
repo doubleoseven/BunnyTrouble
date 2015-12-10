@@ -265,12 +265,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1525852177}
-        m_MethodName: LoadCreditScene
-        m_Mode: 1
+        m_MethodName: LoadSpecificScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1587,10 +1587,11 @@ AudioSource:
   m_GameObject: {fileID: 613694599}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .829999983
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1667,6 +1668,7 @@ MonoBehaviour:
   buttonClick2: {fileID: 8300000, guid: 19487f7ebba714b99bf33199384cc90b, type: 3}
   win: {fileID: 8300000, guid: d1ef7bdc941db4cbc8e7c4e3a02f720b, type: 3}
   lose: {fileID: 8300000, guid: 5e29dce1a1a73438fa61fd59b83db1a5, type: 3}
+  plantExplosion: {fileID: 8300000, guid: 1199cb47f7b214846a459839ab20179c, type: 3}
   waves:
   - {fileID: 8300000, guid: a5707ede496354878a6faa9f824cb393, type: 3}
   - {fileID: 8300000, guid: 5db72b03198ae4967a1546d05940b29d, type: 3}
@@ -3353,7 +3355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a5fa76fe0a547ee842d7fecb84c442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToStart: 4
+  sceneToStart: 6
   changeScenes: 1
   changeMusicOnStart: 0
   musicToChangeTo: 0
@@ -4040,7 +4042,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1958653388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2a8edbf121852459999153887dd35a96, type: 2}
   m_CullingMode: 0

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class damageBunny : MonoBehaviour {
+public class damageBunny : MonoBehaviour 
+{
 
 	public int damage = 1;
 	public float timeBetweenDamage = 0.15f;
@@ -11,11 +12,7 @@ public class damageBunny : MonoBehaviour {
 
 	plantHealth pHealth;
 	bunnyHealth bHealth;
-	// Use this for initialization
-	void Awake() 
-	{
-	
-	}
+
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
@@ -27,14 +24,16 @@ public class damageBunny : MonoBehaviour {
 		}
 	}
 
-//	void OnCollisionExit2D(Collision2D coll)
-//	{
-//		if (coll.gameObject.tag == "enemy") 
-//		{
-//			Debug.Log ("Not Colliding with bunny!");
-//			bunnyInRange = false;
-//		}
-//	}
+	void OnCollisionExit2D(Collision2D coll)
+	{
+		if (coll.gameObject.tag == "enemy") 
+		{
+			StopColliding();
+		}
+	}
+
+
+	//Put back the ONCollisionExit2D etc
 
 	public void StopColliding()
 	{
@@ -42,12 +41,15 @@ public class damageBunny : MonoBehaviour {
 		bunnyInRange = false;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+
+	void Update () 
+	{
 		timer += Time.deltaTime;
 
-		if (timer >= timeBetweenDamage && bunnyInRange) {
-			if (!bHealth.Dead) {
+		if (timer >= timeBetweenDamage && bunnyInRange) 
+		{
+			if (!bHealth.Dead) 
+			{
 				Attack ();
 			} else
 			{
@@ -60,9 +62,16 @@ public class damageBunny : MonoBehaviour {
 	void Attack()
 	{
 		timer = 0f;
+
 		if (!bHealth.Dead) {
+			// Deliver Damage
 			bHealth.doDamage (damage);
-		} else 
-			bunnyInRange = false;
+
+			// Check if bunny has "died"
+			if (bHealth.Dead) {
+				StopColliding ();
+			}
+		} else
+			StopColliding ();
 	}
 }

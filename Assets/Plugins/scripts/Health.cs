@@ -10,6 +10,7 @@ public class Health: MonoBehaviour {
 	{
 		currentHealth -= damageValue;
 	}
+
 	public virtual void death()
 	{
 		dead = true;

@@ -11,6 +11,7 @@ public class SoundEffectsManager : MonoBehaviour {
 	public AudioClip buttonClick2;
 	public AudioClip win;
 	public AudioClip lose;
+	public AudioClip plantExplosion;
 	public AudioClip[] waves;
 
 	public static SoundEffectsManager _instance = null;
@@ -62,6 +63,11 @@ public class SoundEffectsManager : MonoBehaviour {
 	public void playGameOver()
 	{
 		soundEffect.PlayOneShot (lose);
+	}
+
+	public void PlayPlantExplosion()
+	{
+		soundEffect.PlayOneShot (plantExplosion);
 	}
 
 	public void playWaveSound(int currentWave)
