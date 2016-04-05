@@ -200,7 +200,7 @@ GameObject:
   - 114: {fileID: 49873822}
   - 95: {fileID: 49873825}
   m_Layer: 5
-  m_Name: Options
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2544,11 +2544,11 @@ RectTransform:
   - {fileID: 790358401}
   m_Father: {fileID: 1993103759}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -11}
-  m_SizeDelta: {x: 194, y: 221}
-  m_Pivot: {x: .5, y: .5}
+  m_AnchorMin: {x: .5, y: .370256573}
+  m_AnchorMax: {x: .5, y: .370256573}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 120, y: 189}
+  m_Pivot: {x: .5, y: .428550899}
 --- !u!114 &1154860151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2564,8 +2564,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 5
     m_Right: 5
-    m_Top: 0
-    m_Bottom: 0
+    m_Top: 2
+    m_Bottom: 2
   m_ChildAlignment: 4
   m_Spacing: 2
   m_ChildForceExpandWidth: 1
@@ -3355,7 +3355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a5fa76fe0a547ee842d7fecb84c442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToStart: 6
+  sceneToStart: 4
   changeScenes: 1
   changeMusicOnStart: 0
   musicToChangeTo: 0
@@ -3538,9 +3538,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 232, y: 335}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -4123,10 +4123,10 @@ RectTransform:
   - {fileID: 1154860150}
   m_Father: {fileID: 1525852162}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -6, y: -14}
-  m_SizeDelta: {x: 232, y: 335}
+  m_AnchorMin: {x: .5, y: .409999996}
+  m_AnchorMax: {x: .5, y: .409999996}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 141.300003, y: 219.100006}
   m_Pivot: {x: .5, y: .5}
 --- !u!225 &1993103760
 CanvasGroup:
