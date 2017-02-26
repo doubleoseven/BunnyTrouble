@@ -5,19 +5,20 @@ using System.Collections;
 public class selectTile : MonoBehaviour {
 
 	private Pause pauseScript;
-	// Checks to see if the current tile is selected
+	/// Checks to see if the current tile is selected
 	public bool currentSelected;
 
-	// Checks if a plant has been planted on the current tile
+	/// Checks if a plant has been planted on the current tile
 	public bool vegtablePlanted;
 
-	// A refrence to the Element class
+	/// A refrence to the Element class
 	NumberTexture numberTextureScript;
 
 	private Color selectedColor;
 	private Color unSelectdColor;
 
 	private SpriteRenderer spriteRenderer;
+
 
 	void Start () {
 
@@ -41,7 +42,7 @@ public class selectTile : MonoBehaviour {
 			if (tileCanBeSelected ()) {
 				GameManager.instance.tileSelected = true;
 				currentSelected = true;
-				// Set the value of the tile selected
+				/// Set the value of the tile selected
 				GameManager.instance.setTileSelectedValue (numberTextureScript.getValue ());
 				GameManager.instance.tileObject = gameObject;
 			} else if (tileCanBeDeSelected ()) {
@@ -53,7 +54,7 @@ public class selectTile : MonoBehaviour {
 		}
 	}
 
-	// Setters and getters
+	/// Setters and getters
 	public bool getCurrentSelected(){
 		return currentSelected;
 	}
@@ -70,12 +71,19 @@ public class selectTile : MonoBehaviour {
 		vegtablePlanted = planted;
 	}
 
+	/// The tile can only be selected/deselected if no plant has been planted on it
 	public bool tileCanBeSelected()
 	{
-		// The tile can only be selected/deselected if no plant has been planted on it
 		return GameManager.instance.tileSelected == false && currentSelected == false && vegtablePlanted == false;
 	}
 
+
+
+
+	/********************************************//**
+	*  ## CanBeDeSelected
+	* Called when the tile is clicked on. Checks to see if the tile can be unselected
+	***********************************************/
 	public bool tileCanBeDeSelected()
 	{
 		return GameManager.instance.tileSelected == true && currentSelected == true && vegtablePlanted == false;

@@ -3,10 +3,10 @@ using System.Collections;
 
 public class bunnyHealth : Health
 {  
-	public int startingHealth = 20;
+	public int startingHealth = 20; /*!< Detailed description after the member */
 
-	//To animate when the bunny dies
-	Animator anim;
+	///To animate when the bunny dies
+	Animator anim; 
 	
 	void Awake()
 	{
@@ -27,6 +27,7 @@ public class bunnyHealth : Health
 		}
 	}
 
+	// Calls this function when the enemy dies
 	public override void death()
 	{
 		base.death ();
